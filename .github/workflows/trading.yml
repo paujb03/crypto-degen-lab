@@ -1,0 +1,49 @@
+name: trading-cycle
+
+on:
+  schedule:
+    # Cada 4 horas (UTC), minuto 17 para evitar la hora en punto (GitHub va saturado a :00)
+    - cron: "17 */4 * * *"
+  workflow_dispatch: {}   # botón "Run workflow" para lanzarlo a mano
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trading
+  cancel-in-progress: false
+
+jobs:
+  cycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar dependencias
+        run: |
+          pip install -r requirements.txt
+          npm install -g @anthropic-ai/claude-code
+
+      - name: Ciclo de trading
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m bot.run
+
+      - name: Guardar estado y panel
+        run: |
+          git config user.name "degen-lab-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add state/state.json state/journal.json docs/
+          git commit -m "ciclo $(date -u +'%Y-%m-%d %H:%M') UTC" || echo "sin cambios"
+          git pull --rebase --autostash
+          git push

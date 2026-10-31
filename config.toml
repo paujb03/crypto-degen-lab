@@ -1,0 +1,111 @@
+# ============================================================
+#  crypto-degen-lab — configuración
+#  Todo es PAPER TRADING (dinero ficticio). No hay claves privadas.
+# ============================================================
+
+[general]
+starting_cash_usd = 1000.0
+# Cadenas a escanear (ids de DexScreener): solana, base, bsc, ethereum
+chains = ["solana", "base", "bsc", "ethereum"]
+# Máximo de candidatos que pasan a análisis de seguridad (cada uno = 1 llamada a RugCheck/GoPlus)
+max_security_checks = 30
+# Máximo de candidatos que ve la IA en cada ciclo
+max_candidates_for_ai = 15
+# Ciclos de historial guardados en el diario
+journal_keep = 60
+
+[llm]
+# "claude_cli" = usa tu suscripción Pro vía Claude Code (CLAUDE_CODE_OAUTH_TOKEN)
+# "anthropic_api" = usa ANTHROPIC_API_KEY (de pago por uso)
+# "mock" = sin IA, para pruebas
+backend = "claude_cli"
+# "full" = analista + scout + oficial de riesgo + 1 gestor por persona
+# "economy" = 1 llamada de research combinada + 1 gestor por persona (gasta menos límite)
+mode = "full"
+model_analyst = "sonnet"
+model_scout = "sonnet"
+model_risk = "sonnet"
+model_manager = "sonnet"
+timeout_seconds = 300
+
+[simulation]
+# Comisión del DEX por swap
+dex_fee = 0.003
+# Slippage extra / MEV / priority fees en memecoins
+extra_slippage = 0.01
+# Coste fijo de red por operación (USD)
+network_fee_usd = 0.30
+# Por debajo de esta liquidez una posición se considera "rug" (no se puede vender)
+rug_liquidity_usd = 1500.0
+# Coste para majors (BTC/ETH/SOL) en un exchange
+major_fee = 0.001
+
+[filters]
+# Filtros duros: lo que no cumpla esto ni se mira
+min_liquidity_usd = 8000.0
+min_volume_h24_usd = 15000.0
+min_age_minutes = 15
+max_age_days = 30
+max_sell_tax = 0.12
+max_buy_tax = 0.12
+# Puntuación normalizada de RugCheck (0-100, más alto = más riesgo)
+max_rugcheck_score = 70
+
+# ------------------------------------------------------------
+#  ARENA: cada persona es una cartera independiente con 1000 $
+# ------------------------------------------------------------
+
+[[persona]]
+name = "degen"
+kind = "llm"
+description = "Cazador de memecoins agresivo. Busca tokens nuevos con momentum explosivo, acepta mucho riesgo, corta pérdidas rápido y deja correr ganadores."
+universe = "memes"          # memes | all | majors
+max_positions = 8
+max_position_pct = 0.10     # % máximo del equity por posición
+min_cash_pct = 0.10
+max_pool_share = 0.02       # nunca comprar más del 2% de la liquidez del pool
+stop_loss = -0.40
+trailing_stop = -0.35       # desde el máximo alcanzado
+take_profit = 1.00          # al +100% vende la mitad
+take_profit_fraction = 0.5
+max_hold_hours = 96
+daily_drawdown_halt = -0.25
+
+[[persona]]
+name = "momentum"
+kind = "llm"
+description = "Trader de momentum más selectivo. Prefiere tokens con algo de historia, liquidez seria y tendencia confirmada; mezcla memecoins consolidadas con majors según el régimen de mercado."
+universe = "all"
+max_positions = 6
+max_position_pct = 0.15
+min_cash_pct = 0.15
+max_pool_share = 0.01
+stop_loss = -0.25
+trailing_stop = -0.22
+take_profit = 0.60
+take_profit_fraction = 0.5
+max_hold_hours = 240
+daily_drawdown_halt = -0.15
+min_liquidity_usd = 75000.0
+
+[[persona]]
+name = "baseline"
+kind = "rules"
+description = "Control SIN IA: compra los candidatos con mejor puntuación heurística y aplica las mismas reglas de riesgo que degen. Sirve para ver si Claude aporta algo."
+universe = "memes"
+max_positions = 8
+max_position_pct = 0.10
+min_cash_pct = 0.10
+max_pool_share = 0.02
+stop_loss = -0.40
+trailing_stop = -0.35
+take_profit = 1.00
+take_profit_fraction = 0.5
+max_hold_hours = 96
+daily_drawdown_halt = -0.25
+
+[[persona]]
+name = "hodl_sol"
+kind = "hodl"
+description = "Referencia: 100% SOL comprado el primer día y nunca vendido."
+asset = "solana"

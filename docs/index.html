@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>crypto-degen-lab · arena</title>
+<style>
+:root{--bg:#0b0d12;--panel:#12151d;--line:#232836;--txt:#e6e8ef;--mute:#8a90a2;--up:#2bd47d;--down:#ff5c6c;--acc:#8b7bff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:14px/1.45 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:1200px;margin:0 auto;padding:24px 16px 60px}
+h1{font-size:22px;margin:0}h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);margin:32px 0 12px}
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.sub{color:var(--mute);font-size:13px}.badge{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:600;border:1px solid var(--line)}
+.risk_on{color:var(--up);border-color:#1f5f3f}.risk_off{color:var(--down);border-color:#6a2a33}.neutral{color:#f0c060;border-color:#5f5020}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}
+.card h3{margin:0 0 2px;font-size:15px;display:flex;justify-content:space-between}.big{font-size:24px;font-weight:700;margin:6px 0}
+.kv{display:flex;justify-content:space-between;color:var(--mute);font-size:12px}.kv b{color:var(--txt);font-weight:500}
+.up{color:var(--up)}.down{color:var(--down)}.mute{color:var(--mute)}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mute);font-weight:500;font-size:12px}td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+a{color:var(--acc);text-decoration:none}.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.tab{background:var(--panel);border:1px solid var(--line);color:var(--txt);padding:6px 12px;border-radius:8px;cursor:pointer}
+.tab.on{border-color:var(--acc);color:#fff}.note{color:var(--mute);font-size:13px;margin:6px 0 12px;font-style:italic}
+svg text{fill:var(--mute);font-size:11px}.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;margin-top:6px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.pill{font-size:11px;padding:1px 6px;border-radius:5px;background:#1b1f2b;color:var(--mute)}
+.veto{text-decoration:line-through;opacity:.55}.scroll{overflow-x:auto}
+details{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 12px;margin-bottom:6px}
+summary{cursor:pointer}.foot{margin-top:40px;color:var(--mute);font-size:12px}
+</style></head><body><div class="wrap">
+<div class="top"><div><h1>🧪 crypto-degen-lab</h1><div class="sub">Arena de paper trading cripto con agentes Claude · dinero ficticio</div></div>
+<div class="sub" id="upd"></div></div>
+<h2>Arena</h2><div class="grid" id="cards"></div>
+<div class="card" style="margin-top:12px"><div id="chart"></div><div class="legend" id="legend"></div></div>
+<h2>Último ciclo · research</h2><div class="card" id="research"></div>
+<h2>Carteras</h2><div class="tabs" id="tabs"></div><div class="card" id="pf"></div>
+<h2>Radar de candidatos</h2><div class="card scroll" id="cands"></div>
+<h2>Diario</h2><div id="hist"></div>
+<div class="foot">Experimento educativo. Nada de esto es asesoramiento financiero. Los resultados simulados no garantizan nada en real.</div>
+</div>
+<script>
+const D={"updated": 0, "cycles": 0, "portfolios": [], "last": {}, "history": []};
+const COLORS=["#8b7bff","#2bd47d","#f0c060","#4fc3f7","#ff5c6c","#e88cff"];
+const $=s=>document.querySelector(s);
+const fmt=(n,d=2)=>n==null?"–":Number(n).toLocaleString("es-ES",{minimumFractionDigits:d,maximumFractionDigits:d});
+const usd=n=>fmt(n)+" $";const pct=n=>n==null?"–":`<span class="${n>=0?"up":"down"}">${n>=0?"+":""}${fmt(n,1)}%</span>`;
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const dt=t=>new Date(t*1000).toLocaleString("es-ES",{day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit"});
+$("#upd").innerHTML=`Actualizado ${D.updated?dt(D.updated):"–"} · ciclo ${D.cycles}`;
+const KIND={llm:"Claude",rules:"sin IA",hodl:"referencia"};
+$("#cards").innerHTML=D.portfolios.map((p,i)=>{const s=p.summary;return `<div class="card"><h3><span><span class="dot" style="background:${COLORS[i%6]}"></span>${esc(p.name)}</span><span class="pill">${KIND[p.kind]||p.kind}</span></h3>
+<div class="big">${usd(s.equity)}</div><div class="kv">Rentabilidad <b>${pct(s.return_pct)}</b></div>
+<div class="kv">Máx. drawdown <b>${pct(s.max_drawdown_pct)}</b></div><div class="kv">Posiciones abiertas <b>${s.open_positions}</b></div>
+<div class="kv">Win rate <b>${s.win_rate==null?"–":fmt(s.win_rate,0)+"%"} (${s.closed_trades})</b></div><div class="kv">Rugs sufridos <b>${s.rugs}</b></div></div>`}).join("");
+// chart
+(function(){const W=1100,H=280,P={l:56,r:12,t:12,b:26};const all=D.portfolios.flatMap(p=>p.curve);if(all.length<2){$("#chart").innerHTML='<div class="note">La gráfica aparece tras el segundo ciclo.</div>';return}
+const xs=all.map(c=>c[0]),ys=all.map(c=>c[1]);let x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);if(x1===x0)x1=x0+1;const pad=(y1-y0)*.08||10;y0-=pad;y1+=pad;
+const X=t=>P.l+(t-x0)/(x1-x0)*(W-P.l-P.r),Y=v=>H-P.b-(v-y0)/(y1-y0)*(H-P.t-P.b);let g="";
+for(let i=0;i<=4;i++){const v=y0+(y1-y0)*i/4;g+=`<line x1="${P.l}" x2="${W-P.r}" y1="${Y(v)}" y2="${Y(v)}" stroke="#232836"/><text x="${P.l-6}" y="${Y(v)+4}" text-anchor="end">${fmt(v,0)}</text>`}
+for(let i=0;i<=4;i++){const t=x0+(x1-x0)*i/4;g+=`<text x="${X(t)}" y="${H-6}" text-anchor="middle">${dt(t)}</text>`}
+const start=D.portfolios[0]?.curve[0]?.[1];if(start)g+=`<line x1="${P.l}" x2="${W-P.r}" y1="${Y(start)}" y2="${Y(start)}" stroke="#555" stroke-dasharray="4 4"/>`;
+D.portfolios.forEach((p,i)=>{g+=`<polyline fill="none" stroke="${COLORS[i%6]}" stroke-width="2" points="${p.curve.map(c=>X(c[0])+","+Y(c[1])).join(" ")}"/>`});
+$("#chart").innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="100%">${g}</svg>`;
+$("#legend").innerHTML=D.portfolios.map((p,i)=>`<span><span class="dot" style="background:${COLORS[i%6]}"></span>${esc(p.name)}</span>`).join("")})();
+// research
+(function(){const r=D.last.research;const st=D.last.scan||{};let h="";
+if(!r){h='<div class="note">La IA no estuvo disponible en el último ciclo (límite de uso o error). Solo se aplicaron las reglas automáticas.</div>'}
+else{const vet=new Set((r.vetoes||[]).map(v=>v.key));
+h+=`<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><span class="badge ${r.regime}">${esc(r.regime)}</span><span class="mute">confianza ${r.confidence??"–"} · apetito memes ${r.meme_appetite!=null?fmt(r.meme_appetite*100,0)+"%":"–"} · riesgo nuevo máx ${r.max_new_risk!=null?fmt(r.max_new_risk*100,0)+"%":"–"}</span></div>
+<p>${esc(r.summary)}</p>${r.market_read?`<p class="mute">🔭 ${esc(r.market_read)}</p>`:""}
+${(r.narratives||[]).length?`<p>${r.narratives.map(n=>`<span class="pill">${esc(n)}</span>`).join(" ")}</p>`:""}
+${r.notes?`<p class="mute">🛡️ ${esc(r.notes)}</p>`:""}
+<div class="scroll"><table><tr><th>Pick del scout</th><th class="n">Convicción</th><th>Tesis</th><th>Red flags</th></tr>
+${(r.picks||[]).map(p=>`<tr class="${vet.has(p.key)?"veto":""}"><td><b>${esc((p.key||"").split(":")[0])}</b> <span class="mute">${esc(((D.last.candidates||[]).find(c=>c.key===p.key)||{}).symbol||"")}</span></td><td class="n">${p.conviction??""}</td><td>${esc(p.thesis)}</td><td class="mute">${esc(p.red_flags)}</td></tr>`).join("")}</table></div>
+${(r.vetoes||[]).length?`<p><b>Vetos del oficial de riesgo:</b></p><ul>${r.vetoes.map(v=>`<li><span class="mute">${esc(v.key)}</span> — ${esc(v.why)}</li>`).join("")}</ul>`:""}`}
+h+=`<p class="mute">Embudo: ${st.discovered??0} descubiertos → ${st.passed_basic??0} pasan filtros → ${st.security_checked??0} revisados → ${st.passed_security??0} seguros · ${D.last.llm_calls??0} llamadas a Claude · ${D.last.duration_s??"–"}s</p>`;
+$("#research").innerHTML=h})();
+// portfolios
+let cur=D.portfolios[0]?.name;function drawPf(){const p=D.portfolios.find(x=>x.name===cur);if(!p)return;const pe=(D.last.personas||{})[p.name]||{};
+$("#tabs").innerHTML=D.portfolios.map(x=>`<button class="tab ${x.name===cur?"on":""}" onclick="cur='${x.name}';drawPf()">${esc(x.name)}</button>`).join("");
+let h=`<div class="note">${esc(p.description)}</div>${p.commentary?`<p>💬 ${esc(p.commentary)}</p>`:""}`;
+if((pe.rejected||[]).length)h+=`<p class="mute">Recortado por el gestor de riesgo: ${pe.rejected.map(r=>esc(r.why)).join(" · ")}</p>`;
+h+=`<h4>Posiciones</h4><div class="scroll"><table><tr><th>Token</th><th>Cadena</th><th class="n">Valor</th><th class="n">PnL</th><th class="n">Horas</th><th class="n">Liquidez</th><th>Tesis</th></tr>
+${p.positions.map(x=>`<tr><td>${x.url?`<a href="${x.url}" target="_blank">${esc(x.symbol)}</a>`:esc(x.symbol)}</td><td class="mute">${esc(x.chain)}</td><td class="n">${usd(x.value)}</td><td class="n">${pct(x.pnl_pct)}</td><td class="n">${fmt(x.held_h,0)}</td><td class="n">${x.chain==="cex"?"–":fmt(x.liq,0)}</td><td class="mute">${esc(x.thesis)}</td></tr>`).join("")||'<tr><td colspan="7" class="mute">Sin posiciones</td></tr>'}</table></div>
+<h4>Operaciones recientes</h4><div class="scroll"><table><tr><th>Fecha</th><th></th><th>Token</th><th class="n">USD</th><th class="n">PnL</th><th>Motivo</th></tr>
+${p.trades.map(t=>`<tr><td class="mute">${esc(t.time)}</td><td class="${t.side==="BUY"?"up":"down"}">${t.side==="BUY"?"COMPRA":"VENTA"}${t.rug?" 💀":""}</td><td>${esc(t.symbol)} <span class="mute">${esc(t.chain)}</span></td><td class="n">${usd(t.usd)}</td><td class="n">${t.pnl_pct!=null?pct(t.pnl_pct):""}</td><td class="mute">${esc(t.reason)}</td></tr>`).join("")||'<tr><td colspan="6" class="mute">Aún no hay operaciones</td></tr>'}</table></div>`;
+$("#pf").innerHTML=h}drawPf();
+// candidates
+$("#cands").innerHTML=`<table><tr><th>Token</th><th>Cadena</th><th class="n">Score</th><th class="n">Liquidez</th><th class="n">1h</th><th class="n">24h</th></tr>
+${(D.last.candidates||[]).map(c=>`<tr><td>${c.url?`<a href="${c.url}" target="_blank">${esc(c.symbol)}</a>`:esc(c.symbol)}</td><td class="mute">${esc(c.chain)}</td><td class="n">${fmt(c.score,0)}</td><td class="n">${fmt(c.liquidity,0)}</td><td class="n">${pct(c.change_h1)}</td><td class="n">${pct(c.change_h24)}</td></tr>`).join("")||'<tr><td colspan="6" class="mute">Sin candidatos</td></tr>'}</table>`;
+// history
+$("#hist").innerHTML=D.history.map(h=>`<details><summary>${esc(h.time)} UTC · <span class="badge ${h.regime||""}">${esc(h.regime||"sin IA")}</span> · ${h.trades} operaciones · ${h.llm_calls??0} llamadas IA</summary><p>${esc(h.summary||"")}</p><ul>${(h.log||[]).map(l=>`<li class="mute">${esc(l)}</li>`).join("")}</ul></details>`).join("");
+</script></body></html>
