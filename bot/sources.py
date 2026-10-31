@@ -157,15 +157,19 @@ class LiveMarket:
         res = {"checked": False, "honeypot": False, "buy_tax": 0.0, "sell_tax": 0.0,
                "score": None, "flags": [], "danger": []}
         if chain == "solana":
-            d = get_json(f"https://api.rugcheck.xyz/v1/tokens/{address}/report/summary")
+            d = (get_json(f"https://api.rugcheck.xyz/v1/tokens/{address}/report/summary", retries=1)
+                 or get_json(f"https://api.rugcheck.xyz/v1/tokens/{address}/report", retries=1))
             if d:
                 res["checked"] = True
+                res["source"] = "rugcheck"
                 res["score"] = _f(d.get("score_normalised"), None)
                 for r in d.get("risks") or []:
                     label = r.get("name", "?")
                     res["flags"].append(f"{r.get('level', '?')}: {label}")
                     if r.get("level") == "danger":
                         res["danger"].append(label)
+            else:
+                self._goplus_solana(address, res)
         elif chain in GOPLUS_CHAIN:
             d = get_json(f"https://api.gopluslabs.io/api/v1/token_security/{GOPLUS_CHAIN[chain]}",
                          params={"contract_addresses": address})
@@ -189,4 +193,35 @@ class LiveMarket:
                 if info.get("hidden_owner") == "1":
                     res["danger"].append("owner oculto")
                 res["holders"] = int(_f(info.get("holder_count")))
+                res["source"] = "goplus"
+        if not res["checked"]:
+            res["flags"].append("seguridad NO verificada (API no disponible)")
         return res
+
+    def _goplus_solana(self, address: str, res: dict):
+        d = get_json("https://api.gopluslabs.io/api/v1/solana/token_security",
+                     params={"contract_addresses": address}, retries=2)
+        result = (d or {}).get("result") or {}
+        info = result.get(address) or next(iter(result.values()), None) if result else None
+        if not info:
+            return
+        res["checked"] = True
+        res["source"] = "goplus"
+
+        def on(k):
+            v = info.get(k)
+            if isinstance(v, dict):
+                v = v.get("status")
+            return str(v) == "1"
+
+        for k, label, dangerous in (("mintable", "mint authority activa", True),
+                                    ("freezable", "freeze authority activa", True),
+                                    ("balance_mutable_authority", "balances modificables", True),
+                                    ("non_transferable", "no transferible", True),
+                                    ("closable", "cuenta cerrable", False),
+                                    ("metadata_mutable", "metadata modificable", False),
+                                    ("transfer_hook", "transfer hook", False)):
+            if on(k):
+                res["flags"].append(label)
+                if dangerous:
+                    res["danger"].append(label)

@@ -50,6 +50,8 @@ max_sell_tax = 0.12
 max_buy_tax = 0.12
 # Puntuación normalizada de RugCheck (0-100, más alto = más riesgo)
 max_rugcheck_score = 70
+# Si RugCheck/GoPlus no responden, descartar el token (más seguro)
+require_security_check = true
 
 # ------------------------------------------------------------
 #  ARENA: cada persona es una cartera independiente con 1000 $

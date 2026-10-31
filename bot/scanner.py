@@ -3,6 +3,11 @@ from __future__ import annotations
 
 import math
 
+# Stables, wrapped and liquid-staking tokens: not what this lab hunts
+NOT_MEMES = {"USDC", "USDT", "DAI", "USDE", "FDUSD", "PYUSD", "USDS", "USD1", "TUSD", "BUSD", "EURC",
+             "WETH", "WBTC", "WSOL", "WBNB", "CBETH", "CBBTC", "STETH", "WSTETH", "RETH", "WEETH",
+             "EZETH", "JITOSOL", "MSOL", "BSOL", "JUPSOL", "INF", "SOL", "ETH", "BTC", "BNB", "TBTC"}
+
 
 def features(p: dict, now: float, tags: set[str]) -> dict:
     age_h = max(0.0, (now * 1000 - p["created_ms"]) / 3.6e6) if p["created_ms"] else None
@@ -46,6 +51,9 @@ def hard_filter(p: dict, f: dict, cfg: dict) -> str | None:
     """Return a rejection reason or None."""
     if p["price"] <= 0:
         return "sin precio"
+    sym = (p.get("symbol") or "").upper()
+    if sym in NOT_MEMES:
+        return "stable/wrapped (no es meme)"
     if p["liquidity"] < cfg["min_liquidity_usd"]:
         return f"liquidez {p['liquidity']:.0f}$ < mínimo"
     if p["volume"]["h24"] < cfg["min_volume_h24_usd"]:
@@ -59,6 +67,8 @@ def hard_filter(p: dict, f: dict, cfg: dict) -> str | None:
 
 
 def security_filter(sec: dict, cfg: dict) -> str | None:
+    if not sec.get("checked") and cfg.get("require_security_check", True):
+        return "sin verificación de seguridad"
     if sec.get("honeypot"):
         return "HONEYPOT"
     if sec.get("sell_tax", 0) > cfg["max_sell_tax"]:
