@@ -1,0 +1,526 @@
+{
+ "portfolios": {
+  "degen": {
+   "name": "degen",
+   "kind": "llm",
+   "description": "Cazador de memecoins agresivo. Busca tokens nuevos con momentum explosivo, acepta mucho riesgo, corta pérdidas rápido y deja correr ganadores.",
+   "cash": 910.0440011305501,
+   "start_cash": 1000.0,
+   "created": 1793444926.41551,
+   "positions": {
+    "solana:2gTbp2gwH46rqExzabSyrdR3294SLwCp2rSqWDS6Sim1": {
+     "key": "solana:2gTbp2gwH46rqExzabSyrdR3294SLwCp2rSqWDS6Sim1",
+     "symbol": "CATPAD",
+     "chain": "solana",
+     "kind": "dex",
+     "qty": 311719.47105114174,
+     "cost_usd": 60.0,
+     "entry_price": 0.00019248075777132383,
+     "peak_price": 0.0001884,
+     "last_price": 0.0001884,
+     "entry_liquidity": 35319.73,
+     "last_liquidity": 35319.73,
+     "opened_at": 1793444926.41551,
+     "tp_done": false,
+     "sell_tax": 0.0,
+     "thesis": "CATPAD mantiene buy/sell h1 positivo (2.06x) tras su pump de 311%; apuesto a una segunda pierna con tamaño contenido dado que el momentum fuerte ya pasó y el régimen es risk_off.",
+     "url": "https://dexscreener.com/solana/gu2ajbkebpvxumm27t41xetevusbvrwghdmjw7fdc4bn"
+    },
+    "solana:9Pz2reimHeS3rUxHE6hPiuXkvijjDb9Nid2xrkmZpump": {
+     "key": "solana:9Pz2reimHeS3rUxHE6hPiuXkvijjDb9Nid2xrkmZpump",
+     "symbol": "ZCASHIER",
+     "chain": "solana",
+     "kind": "dex",
+     "qty": 748888.4533757346,
+     "cost_usd": 29.955998869449896,
+     "entry_price": 4.000061522436143e-05,
+     "peak_price": 3.894e-05,
+     "last_price": 3.894e-05,
+     "entry_liquidity": 15697.32,
+     "last_liquidity": 15697.32,
+     "opened_at": 1793444926.41551,
+     "tp_done": false,
+     "sell_tax": 0.0,
+     "thesis": "ZCASHIER muestra subida orgánica en todos los timeframes sin spike-and-dump, pero su liquidez de solo 15.7k obliga a un tamaño mínimo para evitar slippage excesivo.",
+     "url": "https://dexscreener.com/solana/b9vvbuhc5ryipq6fl9xmadfadrp1zjvtp8nb8kdbbcbj"
+    }
+   },
+   "trades": [
+    {
+     "t": 1793444926.41551,
+     "time": "2026-10-31 11:08",
+     "side": "BUY",
+     "key": "solana:2gTbp2gwH46rqExzabSyrdR3294SLwCp2rSqWDS6Sim1",
+     "symbol": "CATPAD",
+     "chain": "solana",
+     "usd": 60.0,
+     "price": 0.0001884,
+     "impact_pct": 0.33,
+     "fees_usd": 1.08,
+     "reason": "CATPAD mantiene buy/sell h1 positivo (2.06x) tras su pump de 311%; apuesto a una segunda pierna con tamaño contenido dado que el momentum fuerte ya pasó y el régimen es risk_off."
+    },
+    {
+     "t": 1793444926.41551,
+     "time": "2026-10-31 11:08",
+     "side": "BUY",
+     "key": "solana:9Pz2reimHeS3rUxHE6hPiuXkvijjDb9Nid2xrkmZpump",
+     "symbol": "ZCASHIER",
+     "chain": "solana",
+     "usd": 29.96,
+     "price": 3.894e-05,
+     "impact_pct": 0.37,
+     "fees_usd": 0.69,
+     "reason": "ZCASHIER muestra subida orgánica en todos los timeframes sin spike-and-dump, pero su liquidez de solo 15.7k obliga a un tamaño mínimo para evitar slippage excesivo."
+    }
+   ],
+   "equity_curve": [
+    {
+     "t": 1793444926.41551,
+     "equity": 1000.0
+    },
+    {
+     "t": 1793444926.41551,
+     "equity": 997.63
+    }
+   ],
+   "realized_pnl": 0.0,
+   "wins": 0,
+   "losses": 0,
+   "rugs": 0,
+   "halted_until": 0,
+   "last_commentary": "Mercado en risk_off con apetito meme bajo (0.25), así que reduzco drásticamente mi agresividad habitual y solo entro en los dos picks que el equipo de riesgo valida, con tamaños pequeños (~9% del equity combinado) en vez de ir all-in en las velas verdes de 24h que son más ruido que ola real. Dejo el resto en cash para poder reaccionar rápido si aparece una señal de rotación real hacia memes o si estas posiciones necesitan cortarse."
+  },
+  "momentum": {
+   "name": "momentum",
+   "kind": "llm",
+   "description": "Trader de momentum más selectivo. Prefiere tokens con algo de historia, liquidez seria y tendencia confirmada; mezcla memecoins consolidadas con majors según el régimen de mercado.",
+   "cash": 830.007,
+   "start_cash": 1000.0,
+   "created": 1793444926.41551,
+   "positions": {
+    "major:binancecoin": {
+     "key": "major:binancecoin",
+     "symbol": "BNB",
+     "chain": "cex",
+     "kind": "major",
+     "qty": 0.14201839557596352,
+     "cost_usd": 100.0,
+     "entry_price": 704.134134134134,
+     "peak_price": 703.43,
+     "last_price": 703.43,
+     "entry_liquidity": 1000000000000.0,
+     "last_liquidity": 1000000000000.0,
+     "opened_at": 1793444926.41551,
+     "tp_done": false,
+     "sell_tax": 0,
+     "thesis": "BNB es el único major con fuerza relativa real: +0.37% 24h y +0.30% h1 mientras BTC/ETH/SOL siguen en rojo a 7d; en régimen risk_off con dominancia BTC alta, prefiero refugio defensivo en un activo con tendencia confirmada antes que perseguir memes nuevos.",
+     "url": null
+    },
+    "ethereum:0x6d34013052c8fe696805dde682ae8086be5655cc": {
+     "key": "ethereum:0x6d34013052c8fe696805dde682ae8086be5655cc",
+     "symbol": "SI",
+     "chain": "ethereum",
+     "kind": "dex",
+     "qty": 3828.694819362237,
+     "cost_usd": 69.99300000000001,
+     "entry_price": 0.018281164548826345,
+     "peak_price": 0.01796,
+     "last_price": 0.01796,
+     "entry_liquidity": 400306.0,
+     "last_liquidity": 400306.0,
+     "opened_at": 1793444926.41551,
+     "tp_done": false,
+     "sell_tax": 0.0,
+     "thesis": "SI (Super Inu) tiene 56h de historia, liquidez seria (400k) y aceleración de tendencia consistente en todos los timeframes (h1 +9.2%, h6 +28.6%, h24 +41.3%) sin red flags de seguridad; encaja con mi perfil de memecoin consolidada, tamaño reducido dado el apetito meme bajo (0.25).",
+     "url": "https://dexscreener.com/ethereum/0x66e4c63873c716c16433ede4b22911631923de96"
+    }
+   },
+   "trades": [
+    {
+     "t": 1793444926.41551,
+     "time": "2026-10-31 11:08",
+     "side": "BUY",
+     "key": "major:binancecoin",
+     "symbol": "BNB",
+     "chain": "cex",
+     "usd": 100.0,
+     "price": 703.43,
+     "impact_pct": 0.0,
+     "fees_usd": 0.1,
+     "reason": "BNB es el único major con fuerza relativa real: +0.37% 24h y +0.30% h1 mientras BTC/ETH/SOL siguen en rojo a 7d; en régimen risk_off con dominancia BTC alta, prefiero refugio defensivo en un activo con tendencia confirmada antes que perseguir memes nuevos."
+    },
+    {
+     "t": 1793444926.41551,
+     "time": "2026-10-31 11:08",
+     "side": "BUY",
+     "key": "ethereum:0x6d34013052c8fe696805dde682ae8086be5655cc",
+     "symbol": "SI",
+     "chain": "ethereum",
+     "usd": 69.99,
+     "price": 0.01796,
+     "impact_pct": 0.03,
+     "fees_usd": 1.21,
+     "reason": "SI (Super Inu) tiene 56h de historia, liquidez seria (400k) y aceleración de tendencia consistente en todos los timeframes (h1 +9.2%, h6 +28.6%, h24 +41.3%) sin red flags de seguridad; encaja con mi perfil de memecoin consolidada, tamaño reducido dado el apetito meme bajo (0.25)."
+    }
+   ],
+   "equity_curve": [
+    {
+     "t": 1793444926.41551,
+     "equity": 1000.0
+    },
+    {
+     "t": 1793444926.41551,
+     "equity": 998.65
+    }
+   ],
+   "realized_pnl": 0.0,
+   "wins": 0,
+   "losses": 0,
+   "rugs": 0,
+   "halted_until": 0,
+   "last_commentary": "Mercado en risk_off con majors cayendo a 7d, así que mantengo la mayor parte en cash (~83%) y solo tomo posiciones selectivas: BNB por fuerza relativa frente a BTC/ETH/SOL, y SI como única memecoin con tendencia confirmada y liquidez suficiente. Evito GTA6 pese a su score alto porque el pump de 12000% en 24h con caída en m5 huele a distribución, y descarto JAGENT/GANG por flags de seguridad (mint activo y transferencias pausables); tampoco toco los solana sin candidate_data ni los picks del scout que quedaron fuera de allowed_buys."
+  },
+  "baseline": {
+   "name": "baseline",
+   "kind": "rules",
+   "description": "Control SIN IA: compra los candidatos con mejor puntuación heurística y aplica las mismas reglas de riesgo que degen. Sirve para ver si Claude aporta algo.",
+   "cash": 206.29583868287887,
+   "start_cash": 1000.0,
+   "created": 1793444926.41551,
+   "positions": {
+    "ethereum:0x19d5a29c82afab60fe6047b8437c1858789b3150": {
+     "key": "ethereum:0x19d5a29c82afab60fe6047b8437c1858789b3150",
+     "symbol": "GTA6",
+     "chain": "ethereum",
+     "kind": "dex",
+     "qty": 16789.39504628556,
+     "cost_usd": 100.0,
+     "entry_price": 0.005956140749819555,
+     "peak_price": 0.005856,
+     "last_price": 0.005856,
+     "entry_liquidity": 227104.39,
+     "last_liquidity": 227104.39,
+     "opened_at": 1793444926.41551,
+     "tp_done": false,
+     "sell_tax": 0.0,
+     "thesis": "heurística 94.9",
+     "url": "https://dexscreener.com/ethereum/0xc4fc30660423bd04ae1038c2910437d4c2e337498f19cea23df90f4c3e5cf88f"
+    },
+    "solana:2gTbp2gwH46rqExzabSyrdR3294SLwCp2rSqWDS6Sim1": {
+     "key": "solana:2gTbp2gwH46rqExzabSyrdR3294SLwCp2rSqWDS6Sim1",
+     "symbol": "CATPAD",
+     "chain": "solana",
+     "kind": "dex",
+     "qty": 518504.2463804165,
+     "cost_usd": 99.82336421991079,
+     "entry_price": 0.0001925217872693608,
+     "peak_price": 0.0001884,
+     "last_price": 0.0001884,
+     "entry_liquidity": 35319.73,
+     "last_liquidity": 35319.73,
+     "opened_at": 1793444926.41551,
+     "tp_done": false,
+     "sell_tax": 0.0,
+     "thesis": "heurística 91.8",
+     "url": "https://dexscreener.com/solana/gu2ajbkebpvxumm27t41xetevusbvrwghdmjw7fdc4bn"
+    },
+    "solana:5G3pzMiNQxiFctE1aZRTctYJLz5zGdfA1S65QMT5pump": {
+     "key": "solana:5G3pzMiNQxiFctE1aZRTctYJLz5zGdfA1S65QMT5pump",
+     "symbol": "AMC",
+     "chain": "solana",
+     "kind": "dex",
+     "qty": 1118033.2030605085,
+     "cost_usd": 99.55590956990844,
+     "entry_price": 8.904557512011603e-05,
+     "peak_price": 8.694e-05,
+     "last_price": 8.694e-05,
+     "entry_liquidity": 24935.14,
+     "last_liquidity": 24935.14,
+     "opened_at": 1793444926.41551,
+     "tp_done": false,
+     "sell_tax": 0.0,
+     "thesis": "heurística 82.0",
+     "url": "https://dexscreener.com/solana/hc8wzjcag5x3cqycc3pberdc7xxpafx6fhmv4wjzjmfz"
+    },
+    "base:0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22": {
+     "key": "base:0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22",
+     "symbol": "cbETH",
+     "chain": "base",
+     "kind": "dex",
+     "qty": 0.038206617219140294,
+     "cost_usd": 99.24530339642041,
+     "entry_price": 2597.594621559474,
+     "peak_price": 2555.76,
+     "last_price": 2555.76,
+     "entry_liquidity": 1580077.21,
+     "last_liquidity": 1580077.21,
+     "opened_at": 1793444926.41551,
+     "tp_done": false,
+     "sell_tax": 0.0,
+     "thesis": "heurística 78.4",
+     "url": "https://dexscreener.com/base/0x03bf20662f76312aec31ef28d4a024e1eca108af"
+    },
+    "ethereum:0xe78f1b67c3c5d7e8c9836061621f8e0ca914d16a": {
+     "key": "ethereum:0xe78f1b67c3c5d7e8c9836061621f8e0ca914d16a",
+     "symbol": "HI",
+     "chain": "ethereum",
+     "kind": "dex",
+     "qty": 275601.0628998833,
+     "cost_usd": 99.08426071468821,
+     "entry_price": 0.00035952060442772033,
+     "peak_price": 0.0003525,
+     "last_price": 0.0003525,
+     "entry_liquidity": 54019.52,
+     "last_liquidity": 54019.52,
+     "opened_at": 1793444926.41551,
+     "tp_done": false,
+     "sell_tax": 0.0,
+     "thesis": "heurística 77.0",
+     "url": "https://dexscreener.com/ethereum/0x9e50f638b93e36856deebcb45cd9c1cb10fe8b0e675b32390acd862ead60d1d9"
+    },
+    "ethereum:0x6d34013052c8fe696805dde682ae8086be5655cc": {
+     "key": "ethereum:0x6d34013052c8fe696805dde682ae8086be5655cc",
+     "symbol": "SI",
+     "chain": "ethereum",
+     "kind": "dex",
+     "qty": 5413.556474187186,
+     "cost_usd": 98.85595441555391,
+     "entry_price": 0.018260815212128467,
+     "peak_price": 0.01796,
+     "last_price": 0.01796,
+     "entry_liquidity": 400306.0,
+     "last_liquidity": 400306.0,
+     "opened_at": 1793444926.41551,
+     "tp_done": false,
+     "sell_tax": 0.0,
+     "thesis": "heurística 74.5",
+     "url": "https://dexscreener.com/ethereum/0x66e4c63873c716c16433ede4b22911631923de96"
+    },
+    "solana:5wsjHxT5nW5jQuVupXUNnYszF3WoWCfGGk9LMcsCJzY8": {
+     "key": "solana:5wsjHxT5nW5jQuVupXUNnYszF3WoWCfGGk9LMcsCJzY8",
+     "symbol": "STANK",
+     "chain": "solana",
+     "kind": "dex",
+     "qty": 318965.090240177,
+     "cost_usd": 98.6883857169866,
+     "entry_price": 0.0003094018396893384,
+     "peak_price": 0.0003032,
+     "last_price": 0.0003032,
+     "entry_liquidity": 47060.7,
+     "last_liquidity": 47060.7,
+     "opened_at": 1793444926.41551,
+     "tp_done": false,
+     "sell_tax": 0.0,
+     "thesis": "heurística 74.2",
+     "url": "https://dexscreener.com/solana/6hyfmye2byyscterqueckhihq5x9j2wd2z9watdwy38n"
+    },
+    "solana:DDG8rjV3TViCqKRQED2QZq4MEaE1uqXgEiosBNpapump": {
+     "key": "solana:DDG8rjV3TViCqKRQED2QZq4MEaE1uqXgEiosBNpapump",
+     "symbol": "AgenC",
+     "chain": "solana",
+     "kind": "dex",
+     "qty": 368901.3094705622,
+     "cost_usd": 98.45098328365289,
+     "entry_price": 0.0002668762098593449,
+     "peak_price": 0.0002615,
+     "last_price": 0.0002615,
+     "entry_liquidity": 45885.91,
+     "last_liquidity": 45885.91,
+     "opened_at": 1793444926.41551,
+     "tp_done": false,
+     "sell_tax": 0.0,
+     "thesis": "heurística 72.8",
+     "url": "https://dexscreener.com/solana/abf43sbqjwkf1gzy8mkhnhr8ejlzgf6v9asr8lrmbucj"
+    }
+   },
+   "trades": [
+    {
+     "t": 1793444926.41551,
+     "time": "2026-10-31 11:08",
+     "side": "BUY",
+     "key": "ethereum:0x19d5a29c82afab60fe6047b8437c1858789b3150",
+     "symbol": "GTA6",
+     "chain": "ethereum",
+     "usd": 100.0,
+     "price": 0.005856,
+     "impact_pct": 0.09,
+     "fees_usd": 1.6,
+     "reason": "heurística 94.9"
+    },
+    {
+     "t": 1793444926.41551,
+     "time": "2026-10-31 11:08",
+     "side": "BUY",
+     "key": "solana:2gTbp2gwH46rqExzabSyrdR3294SLwCp2rSqWDS6Sim1",
+     "symbol": "CATPAD",
+     "chain": "solana",
+     "usd": 99.82,
+     "price": 0.0001884,
+     "impact_pct": 0.56,
+     "fees_usd": 1.59,
+     "reason": "heurística 91.8"
+    },
+    {
+     "t": 1793444926.41551,
+     "time": "2026-10-31 11:08",
+     "side": "BUY",
+     "key": "solana:5G3pzMiNQxiFctE1aZRTctYJLz5zGdfA1S65QMT5pump",
+     "symbol": "AMC",
+     "chain": "solana",
+     "usd": 99.56,
+     "price": 8.694e-05,
+     "impact_pct": 0.79,
+     "fees_usd": 1.59,
+     "reason": "heurística 82.0"
+    },
+    {
+     "t": 1793444926.41551,
+     "time": "2026-10-31 11:08",
+     "side": "BUY",
+     "key": "base:0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22",
+     "symbol": "cbETH",
+     "chain": "base",
+     "usd": 99.25,
+     "price": 2555.76,
+     "impact_pct": 0.01,
+     "fees_usd": 1.59,
+     "reason": "heurística 78.4"
+    },
+    {
+     "t": 1793444926.41551,
+     "time": "2026-10-31 11:08",
+     "side": "BUY",
+     "key": "ethereum:0xe78f1b67c3c5d7e8c9836061621f8e0ca914d16a",
+     "symbol": "HI",
+     "chain": "ethereum",
+     "usd": 99.08,
+     "price": 0.0003525,
+     "impact_pct": 0.36,
+     "fees_usd": 1.58,
+     "reason": "heurística 77.0"
+    },
+    {
+     "t": 1793444926.41551,
+     "time": "2026-10-31 11:08",
+     "side": "BUY",
+     "key": "ethereum:0x6d34013052c8fe696805dde682ae8086be5655cc",
+     "symbol": "SI",
+     "chain": "ethereum",
+     "usd": 98.86,
+     "price": 0.01796,
+     "impact_pct": 0.05,
+     "fees_usd": 1.58,
+     "reason": "heurística 74.5"
+    },
+    {
+     "t": 1793444926.41551,
+     "time": "2026-10-31 11:08",
+     "side": "BUY",
+     "key": "solana:5wsjHxT5nW5jQuVupXUNnYszF3WoWCfGGk9LMcsCJzY8",
+     "symbol": "STANK",
+     "chain": "solana",
+     "usd": 98.69,
+     "price": 0.0003032,
+     "impact_pct": 0.41,
+     "fees_usd": 1.58,
+     "reason": "heurística 74.2"
+    },
+    {
+     "t": 1793444926.41551,
+     "time": "2026-10-31 11:08",
+     "side": "BUY",
+     "key": "solana:DDG8rjV3TViCqKRQED2QZq4MEaE1uqXgEiosBNpapump",
+     "symbol": "AgenC",
+     "chain": "solana",
+     "usd": 98.45,
+     "price": 0.0002615,
+     "impact_pct": 0.42,
+     "fees_usd": 1.58,
+     "reason": "heurística 72.8"
+    }
+   ],
+   "equity_curve": [
+    {
+     "t": 1793444926.41551,
+     "equity": 1000.0
+    },
+    {
+     "t": 1793444926.41551,
+     "equity": 982.12
+    }
+   ],
+   "realized_pnl": 0.0,
+   "wins": 0,
+   "losses": 0,
+   "rugs": 0,
+   "halted_until": 0
+  },
+  "hodl_sol": {
+   "name": "hodl_sol",
+   "kind": "hodl",
+   "description": "Referencia: 100% SOL comprado el primer día y nunca vendido.",
+   "cash": 0.0,
+   "start_cash": 1000.0,
+   "created": 1793444926.41551,
+   "positions": {
+    "major:solana": {
+     "key": "major:solana",
+     "symbol": "SOL",
+     "chain": "cex",
+     "kind": "major",
+     "qty": 10.455259026687598,
+     "cost_usd": 1000.0,
+     "entry_price": 95.64564564564564,
+     "peak_price": 95.55,
+     "last_price": 95.55,
+     "entry_liquidity": 1000000000000.0,
+     "last_liquidity": 1000000000000.0,
+     "opened_at": 1793444926.41551,
+     "tp_done": false,
+     "sell_tax": 0.0,
+     "thesis": "",
+     "url": null
+    }
+   },
+   "trades": [
+    {
+     "t": 1793444926.41551,
+     "time": "2026-10-31 11:08",
+     "side": "BUY",
+     "key": "major:solana",
+     "symbol": "SOL",
+     "chain": "cex",
+     "usd": 1000.0,
+     "price": 95.55,
+     "impact_pct": 0.0,
+     "fees_usd": 1.0,
+     "reason": "compra inicial buy & hold"
+    }
+   ],
+   "equity_curve": [
+    {
+     "t": 1793444926.41551,
+     "equity": 1000.0
+    },
+    {
+     "t": 1793444926.41551,
+     "equity": 999.0
+    }
+   ],
+   "realized_pnl": 0.0,
+   "wins": 0,
+   "losses": 0,
+   "rugs": 0,
+   "halted_until": 0
+  }
+ },
+ "meta": {
+  "regime": {
+   "regime": "risk_off",
+   "confidence": 62,
+   "summary": "Majors en caída generalizada a 7 días (BTC -4%, ETH -5.2%, SOL -5.7%) con el mercado global perdiendo 3.15% en 24h. El Fear & Greed se recuperó de Fear (30) a Neutral (50s) recientemente, sugiriendo estabilización pero sin convicción alcista, mientras BNB muestra fortaleza relativa y la dominancia BTC se mantiene alta (~60%), típico de fases defensivas."
+  },
+  "last_run": 1793444926.41551,
+  "cycles": 1
+ }
+}
