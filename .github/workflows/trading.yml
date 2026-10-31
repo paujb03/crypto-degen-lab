@@ -4,6 +4,8 @@ on:
   schedule:
     # Cada 4 horas (UTC), minuto 17 para evitar la hora en punto (GitHub va saturado a :00)
     - cron: "17 */4 * * *"
+    # MODO PRUEBA: cada 20 min solo el 31 de octubre (UTC). Se apaga solo; borra esta línea cuando quieras.
+    - cron: "*/20 * 31 10 *"
   workflow_dispatch: {}   # botón "Run workflow" para lanzarlo a mano
 
 permissions:
@@ -37,6 +39,8 @@ jobs:
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # En los ciclos rápidos de prueba, modo economy para no agotar el límite del plan
+          LLM_MODE: ${{ github.event.schedule == '*/20 * 31 10 *' && 'economy' || '' }}
         run: python -m bot.run
 
       - name: Guardar estado y panel

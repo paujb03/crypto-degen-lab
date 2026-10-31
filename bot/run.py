@@ -51,6 +51,8 @@ def main(argv=None):
     offline = args.offline or os.environ.get("OFFLINE") == "1"
 
     cfg = tomllib.loads(Path(args.config).read_text())
+    if os.environ.get("LLM_MODE"):
+        cfg["llm"]["mode"] = os.environ["LLM_MODE"]
     sim, gen = cfg["simulation"], cfg["general"]
     personas = cfg["persona"]
     STATE.mkdir(exist_ok=True)
