@@ -4475,5 +4475,607 @@
   "llm_calls": 3,
   "http_errors": [],
   "duration_s": 295.2
+ },
+ {
+  "t": 1793512744.7096055,
+  "time": "2026-11-01 05:59",
+  "log": [
+   "rechazado TIND (solana): peligro: Single holder ownership",
+   "rechazado GANG (bsc): sin verificación de seguridad",
+   "rechazado SI (ethereum): sin verificación de seguridad"
+  ],
+  "personas": {
+   "degen": {
+    "decisions": [
+     {
+      "action": "sell",
+      "key": "solana:FdKdpz11GsTofLaNiddrhxrsE4APZYSSfLFqQ9YKpump",
+      "fraction": 1.0,
+      "size_pct": 0.0,
+      "reason": "SIS confirma colapso (h1 -46.97%, from_peak -32%) exactamente el patrón blow-off que me ha quemado en FUN/ZCASHIER/jeff. El oficial de riesgo pide exit explícito y ya recorté la mitad antes; cierro el resto ya, no espero al stop duro."
+     },
+     {
+      "action": "sell",
+      "key": "base:0x456aC19C8a72Aed16376D57c367640D69ff9e6ea",
+      "fraction": 0.5,
+      "size_pct": 0.0,
+      "reason": "ONECOIN sigue deteriorándose en m5/h1/h6 sin señal de estabilización, from_peak -9.3%. Alerta de riesgo pide reduce; recorto la mitad restante para proteger capital en un régimen neutral-Fear sin rotación a alts."
+     },
+     {
+      "action": "buy",
+      "key": "solana:FWatMYieKhRuJ1yuTcmVG1njRhZWwqHwjR11pBympump",
+      "size_pct": 0.06,
+      "fraction": 0.0,
+      "reason": "Leverhedge acelera limpio (h1 +18.6%, h6 +36.4%, buy/sell h1 1.43) sin señales de distribución, es el único pick con acumulación genuina confirmada en dos ciclos. Añado un poco más dejando correr al ganador."
+     },
+     {
+      "action": "buy",
+      "key": "solana:HytpiyuR3sVXGB5UqoqrnThCPH2X1tWVm5neep3Dpump",
+      "size_pct": 0.05,
+      "fraction": 0.0,
+      "reason": "F7931A (Bitcoin) es el único pick del scout con subida gradual y escalonada en 100h (no vela única), buy/sell estable ~1.5, rugcheck 1.0 y liquidez decente. Fits mi filtro de disciplina: momentum real, no pump artificial."
+     }
+    ],
+    "executed": [
+     {
+      "t": 1793512744.7096055,
+      "time": "2026-11-01 05:59",
+      "side": "SELL",
+      "key": "solana:FdKdpz11GsTofLaNiddrhxrsE4APZYSSfLFqQ9YKpump",
+      "symbol": "SIS",
+      "chain": "solana",
+      "usd": 20.9,
+      "price": 0.000404,
+      "fraction": 1.0,
+      "pnl_usd": -11.34,
+      "pnl_pct": -35.2,
+      "rug": false,
+      "closed": true,
+      "reason": "SIS confirma colapso (h1 -46.97%, from_peak -32%) exactamente el patrón blow-off que me ha quemado en FUN/ZCASHIER/jeff. El oficial de riesgo pide exit explícito y ya recorté la mitad antes; cierro el resto ya, no espero al stop duro."
+     },
+     {
+      "t": 1793512744.7096055,
+      "time": "2026-11-01 05:59",
+      "side": "SELL",
+      "key": "base:0x456aC19C8a72Aed16376D57c367640D69ff9e6ea",
+      "symbol": "ONECOIN",
+      "chain": "base",
+      "usd": 15.79,
+      "price": 0.0001382,
+      "fraction": 0.5,
+      "pnl_usd": -2.46,
+      "pnl_pct": -13.5,
+      "rug": false,
+      "closed": false,
+      "reason": "ONECOIN sigue deteriorándose en m5/h1/h6 sin señal de estabilización, from_peak -9.3%. Alerta de riesgo pide reduce; recorto la mitad restante para proteger capital en un régimen neutral-Fear sin rotación a alts."
+     },
+     {
+      "t": 1793512744.7096055,
+      "time": "2026-11-01 05:59",
+      "side": "BUY",
+      "key": "solana:FWatMYieKhRuJ1yuTcmVG1njRhZWwqHwjR11pBympump",
+      "symbol": "Leverhedge",
+      "chain": "solana",
+      "usd": 16.91,
+      "price": 0.001116,
+      "impact_pct": 0.04,
+      "fees_usd": 0.52,
+      "reason": "Leverhedge acelera limpio (h1 +18.6%, h6 +36.4%, buy/sell h1 1.43) sin señales de distribución, es el único pick con acumulación genuina confirmada en dos ciclos. Añado un poco más dejando correr al ganador."
+     },
+     {
+      "t": 1793512744.7096055,
+      "time": "2026-11-01 05:59",
+      "side": "BUY",
+      "key": "solana:HytpiyuR3sVXGB5UqoqrnThCPH2X1tWVm5neep3Dpump",
+      "symbol": "Bitcoin",
+      "chain": "solana",
+      "usd": 44.73,
+      "price": 0.0003698,
+      "impact_pct": 0.15,
+      "fees_usd": 0.88,
+      "reason": "F7931A (Bitcoin) es el único pick del scout con subida gradual y escalonada en 100h (no vela única), buy/sell estable ~1.5, rugcheck 1.0 y liquidez decente. Fits mi filtro de disciplina: momentum real, no pump artificial."
+     }
+    ],
+    "rejected": [],
+    "commentary": "Corto SIS del todo y reduzco más ONECOIN siguiendo al oficial de riesgo para cortar pérdidas antes de que el stop duro las capture; mantengo FOCO intacto porque ya no está en la lista de alertas y sigue en verde. Refuerzo Leverhedge (único ganador con acumulación real) y abro una entrada pequeña en F7931A por su momentum gradual no parabólico, conservando aún más del 75% en cash dado mi 0% win rate reciente y el apetito meme bajo (0.2)."
+   },
+   "momentum": {
+    "decisions": [],
+    "executed": [],
+    "rejected": [],
+    "commentary": "Mantengo las 6 posiciones sin cambios: BNB/ETH/BTC siguen como ancla defensiva con pnl estable, CBUCKS conserva su tendencia consolidada (+4.2%), FOCO se recupera en h1 (+15%) tras el recorte previo así que no tiene sentido vender más en pérdida, y GOOGLc aporta liquidez seria de baja volatilidad. Con 6 posiciones ya al máximo permitido, meme_appetite en 0.2 y el F&G revirtiendo a Fear, prefiero no forzar nuevas compras ni perseguir los blow-off tops del pool (AAPLCAT, GTA6, SP) y conservar el 54% en cash como colchón hasta que el régimen aclare rotación hacia alts."
+   },
+   "baseline": {
+    "decisions": [],
+    "executed": [],
+    "rejected": [
+     {
+      "key": "*",
+      "why": "circuit breaker: drawdown diario excedido, sin compras 24h"
+     }
+    ],
+    "commentary": "Reglas fijas: 0 compras por puntuación heurística ≥ 62."
+   }
+  },
+  "auto_trades": [
+   {
+    "t": 1793512744.7096055,
+    "time": "2026-11-01 05:59",
+    "side": "SELL",
+    "key": "solana:5G3pzMiNQxiFctE1aZRTctYJLz5zGdfA1S65QMT5pump",
+    "symbol": "AMC",
+    "chain": "solana",
+    "usd": 54.15,
+    "price": 4.964e-05,
+    "fraction": 1.0,
+    "pnl_usd": -45.41,
+    "pnl_pct": -45.6,
+    "rug": false,
+    "closed": true,
+    "reason": "STOP-LOSS -44%",
+    "portfolio": "baseline"
+   }
+  ],
+  "scan": {
+   "discovered": 179,
+   "rejected": {
+    "demasiado": 52,
+    "liquidez": 69,
+    "sin": 3,
+    "volumen": 11,
+    "stable/wrapped": 1,
+    "peligro": 1
+   },
+   "passed_basic": 41,
+   "security_checked": 30,
+   "passed_security": 27
+  },
+  "candidates": [
+   {
+    "key": "bsc:0x4973aAA8271F044e586b71129791e25B1E807777",
+    "symbol": "茧",
+    "chain": "bsc",
+    "score": 100.0,
+    "liquidity": 35959,
+    "change_h1": 259.0,
+    "change_h24": 259.0,
+    "url": "https://dexscreener.com/bsc/0x06bfdc58ac37446b1b62babd15f70ae2ca66daf4"
+   },
+   {
+    "key": "ethereum:0x67365dbb030027894adbf99ec5f0f266693118c9",
+    "symbol": "FLAME",
+    "chain": "ethereum",
+    "score": 91.2,
+    "liquidity": 63270,
+    "change_h1": 77.7,
+    "change_h24": 243.0,
+    "url": "https://dexscreener.com/ethereum/0x34e128284841c9f8cd0e3ce6e353d4ebbf07f6c2"
+   },
+   {
+    "key": "solana:CPoGSmcjprCvzA2MFYLJMpQkGjmgVzKg4RVwMdrzpump",
+    "symbol": "BLUE",
+    "chain": "solana",
+    "score": 91.0,
+    "liquidity": 50910,
+    "change_h1": -7.2,
+    "change_h24": 718.0,
+    "url": "https://dexscreener.com/solana/bzomhwb33rgwuywdm8sqfi3zdnauwnpmhraiqalqnzia"
+   },
+   {
+    "key": "solana:x94ouReAXGWHfNnGokusmmfNttSNEXyfY4ZCQq9pump",
+    "symbol": "iTech",
+    "chain": "solana",
+    "score": 89.2,
+    "liquidity": 42558,
+    "change_h1": 0.7,
+    "change_h24": 557.0,
+    "url": "https://dexscreener.com/solana/dr6ufmyxncjzmpqhxyyr75pqyi4ete6osbd8rbr8g9zw"
+   },
+   {
+    "key": "solana:HytpiyuR3sVXGB5UqoqrnThCPH2X1tWVm5neep3Dpump",
+    "symbol": "Bitcoin",
+    "chain": "solana",
+    "score": 84.1,
+    "liquidity": 57033,
+    "change_h1": 15.0,
+    "change_h24": 46.1,
+    "url": "https://dexscreener.com/solana/4ajaw6ugdpmdke12f1cr9a7uerqjfnepvztswenc5wm6"
+   },
+   {
+    "key": "solana:FWatMYieKhRuJ1yuTcmVG1njRhZWwqHwjR11pBympump",
+    "symbol": "Leverhedge",
+    "chain": "solana",
+    "score": 83.8,
+    "liquidity": 91179,
+    "change_h1": 22.8,
+    "change_h24": 101.0,
+    "url": "https://dexscreener.com/solana/6d3ujezdb2wdbvvryfycvgxsih9fw6ml6hscia5qvhwp"
+   },
+   {
+    "key": "bsc:0xfC96737a40DBf169782E60539B82d4eE17f25708",
+    "symbol": "CENSUS",
+    "chain": "bsc",
+    "score": 83.4,
+    "liquidity": 50489,
+    "change_h1": 30.1,
+    "change_h24": 3093.0,
+    "url": "https://dexscreener.com/bsc/0x4752e61ca6c065a55eaa4fced1fcd52133f014c0"
+   },
+   {
+    "key": "solana:CvRJ8MrnB1AwjrgX25uyeLJiXNSugTo2ZHh8UXDTpump",
+    "symbol": "ANSEM",
+    "chain": "solana",
+    "score": 82.9,
+    "liquidity": 49466,
+    "change_h1": 21.1,
+    "change_h24": 708.0,
+    "url": "https://dexscreener.com/solana/8q2jacsxrbd98bbc9m8tswy8eukcjuhk7hdv7yqjv174"
+   },
+   {
+    "key": "solana:3kRQDKPGqMWwBdGjiVPpPqVzFsnYG5PDqvrVz1D2pump",
+    "symbol": "tipr",
+    "chain": "solana",
+    "score": 82.5,
+    "liquidity": 36941,
+    "change_h1": -20.1,
+    "change_h24": 406.0,
+    "url": "https://dexscreener.com/solana/6qfkd7d8rafvan1fc76m5mtqar3khrhpxpwmqvl6ndxt"
+   },
+   {
+    "key": "ethereum:0x75a3646cb756188bfc9005d82a46abf21d674509",
+    "symbol": "PUTIN",
+    "chain": "ethereum",
+    "score": 81.2,
+    "liquidity": 62989,
+    "change_h1": 16.4,
+    "change_h24": 689.0,
+    "url": "https://dexscreener.com/ethereum/0xc16b3e248d969e0f7860cbd527322603ee8dc00ddf416c272410663a933bed27"
+   },
+   {
+    "key": "solana:GYKnd6jGUSQoBUnj6LdGCBtCWYDgr2Zd6QwNPcy5pump",
+    "symbol": "AAPLCAT",
+    "chain": "solana",
+    "score": 79.7,
+    "liquidity": 88443,
+    "change_h1": 2.8,
+    "change_h24": 2234.0,
+    "url": "https://dexscreener.com/solana/6bnptaekgetqfgqgdwidhfqagamhusyqxqjnllw74exw"
+   },
+   {
+    "key": "base:0xb2000000000000000000002d0ba3164cc74f58b7",
+    "symbol": "GOOGLc",
+    "chain": "base",
+    "score": 77.5,
+    "liquidity": 1953483,
+    "change_h1": 0.1,
+    "change_h24": 0.9,
+    "url": "https://dexscreener.com/base/0x16c70f04c3080a127486cdf5a4c33c066bbf47c3"
+   },
+   {
+    "key": "ethereum:0x19d5a29c82afab60fe6047b8437c1858789b3150",
+    "symbol": "GTA6",
+    "chain": "ethereum",
+    "score": 76.8,
+    "liquidity": 248359,
+    "change_h1": 8.8,
+    "change_h24": 205.0,
+    "url": "https://dexscreener.com/ethereum/0xc4fc30660423bd04ae1038c2910437d4c2e337498f19cea23df90f4c3e5cf88f"
+   },
+   {
+    "key": "base:0x6985884c4392d348587b19cb9eaaf157f13271cd",
+    "symbol": "ZRO",
+    "chain": "base",
+    "score": 76.2,
+    "liquidity": 253739,
+    "change_h1": 0.6,
+    "change_h24": 10.1,
+    "url": "https://dexscreener.com/base/0x0f21a72a02dc78217c2987826d061500aecf7707"
+   },
+   {
+    "key": "ethereum:0x8bb6aa42be6551d9843ce3f4ec5297b6c0d9179c",
+    "symbol": "SP",
+    "chain": "ethereum",
+    "score": 76.1,
+    "liquidity": 220852,
+    "change_h1": 25.1,
+    "change_h24": 122.0,
+    "url": "https://dexscreener.com/ethereum/0x7b0462ffc91785028b67d6411a410661e909fc98e7f8d7657c8fc9f23f45df0a"
+   },
+   {
+    "key": "solana:npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump",
+    "symbol": "DESSA",
+    "chain": "solana",
+    "score": 74.8,
+    "liquidity": 502804,
+    "change_h1": -4.4,
+    "change_h24": 96.5,
+    "url": "https://dexscreener.com/solana/dextcer4k9dwbxtmu8znvvwgevvmvhmb183pf2xxzwvh"
+   },
+   {
+    "key": "solana:2gTbp2gwH46rqExzabSyrdR3294SLwCp2rSqWDS6Sim1",
+    "symbol": "CATPAD",
+    "chain": "solana",
+    "score": 74.3,
+    "liquidity": 30260,
+    "change_h1": 2.2,
+    "change_h24": 12.9,
+    "url": "https://dexscreener.com/solana/gu2ajbkebpvxumm27t41xetevusbvrwghdmjw7fdc4bn"
+   },
+   {
+    "key": "solana:GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump",
+    "symbol": "WASTED",
+    "chain": "solana",
+    "score": 74.1,
+    "liquidity": 28693,
+    "change_h1": -5.6,
+    "change_h24": -49.8,
+    "url": "https://dexscreener.com/solana/tt7dks9yjjzj1fwmgopmkbmdrezzymamrhodcgdfwqn"
+   },
+   {
+    "key": "ethereum:0xa44a3a090e02f090d1b0918713beaea99b2d4ad2",
+    "symbol": "HYPEPE",
+    "chain": "ethereum",
+    "score": 73.5,
+    "liquidity": 127142,
+    "change_h1": 0.0,
+    "change_h24": 167.0,
+    "url": "https://dexscreener.com/ethereum/0xfedc028df370a60e6df32a73d5f692dd2413b0fdf2d19c0a406202e10bc4ab4d"
+   },
+   {
+    "key": "solana:8THZ69JP2ErZuHVj4G5rcwkFfsQafp5mQsaoQReApump",
+    "symbol": "NETWORK",
+    "chain": "solana",
+    "score": 73.4,
+    "liquidity": 44758,
+    "change_h1": 0.5,
+    "change_h24": 15.8,
+    "url": "https://dexscreener.com/solana/88jxy6wuyurl7whzsnywjvjqwvtdoxt3rurac1prglwu"
+   },
+   {
+    "key": "bsc:0x8e6442663a4f8c50b6132c68d42a30e7dfe4ae15",
+    "symbol": "JAGENT",
+    "chain": "bsc",
+    "score": 72.8,
+    "liquidity": 586737,
+    "change_h1": -8.8,
+    "change_h24": -34.9,
+    "url": "https://dexscreener.com/bsc/0xe6efcdef2b720d1eca2b69edb7ef357725680bea"
+   },
+   {
+    "key": "solana:762ZqBCd5m2q3QJ5UPkFL5rqdEUeygNkfTZrpGEZpump",
+    "symbol": "PAWCAT",
+    "chain": "solana",
+    "score": 72.0,
+    "liquidity": 157239,
+    "change_h1": 2.4,
+    "change_h24": 6693.0,
+    "url": "https://dexscreener.com/solana/eej4zypgintcwrq4cvbdubqq7s45krm7xaefcu3uugb"
+   },
+   {
+    "key": "solana:7ttfwuBSnbNTgf32gUAT7v9bjdDWsn6pYpp7nmGmpump",
+    "symbol": "FOCO",
+    "chain": "solana",
+    "score": 71.8,
+    "liquidity": 81055,
+    "change_h1": 16.0,
+    "change_h24": 158.0,
+    "url": "https://dexscreener.com/solana/8l3igrfrvkyrjnu9hzf7sk5nja62s8ga54dkatbf6qh2"
+   },
+   {
+    "key": "solana:3w2TvVmTrtq4kSkoFVrTFQgz6MX7ThzDVrx9r5c3pump",
+    "symbol": "HI",
+    "chain": "solana",
+    "score": 71.3,
+    "liquidity": 51586,
+    "change_h1": -7.2,
+    "change_h24": -64.4,
+    "url": "https://dexscreener.com/solana/2yyp1cexm4vzehsgpqnwgxcz3kssvak7m3j5nskmfahe"
+   },
+   {
+    "key": "solana:3qjBR3LfzEAKVS6QXuR2QZ1RFUsXzATWvmjbGB5Dpump",
+    "symbol": "Jason",
+    "chain": "solana",
+    "score": 70.2,
+    "liquidity": 31838,
+    "change_h1": 10.0,
+    "change_h24": 69.6,
+    "url": "https://dexscreener.com/solana/cyksjjjfpzb7hn7m6i7beax2p6ukgs8cssy8uv9x5u1"
+   }
+  ],
+  "research": {
+   "regime": "neutral",
+   "confidence": 50,
+   "meme_appetite": 0.2,
+   "summary": "Majors siguen en rojo a 7d (-3.7% a -6.7%) con h24 mixto y apenas estabilizándose; el F&G recayó de Neutral (48-51) a Fear (30-34) en las últimas lecturas, revirtiendo la mejora previa. Mcap global cae -1.87% en 24h y la dominancia BTC se mantiene alta (59.3%), sin rotación clara hacia altcoins; el trending mezcla majors y memecoins especulativas (PEPE, PENGU) pero sin señal de apetito generalizado.",
+   "narratives": [
+    "memecoins de nicho en pump.fun/Solana",
+    "pingüinos/colecciones NFT-coin (PENGU)",
+    "infra L1/L2 nuevas (Plasma, Lighter)",
+    "yield/restaking (Pendle, Ethena)"
+   ],
+   "watch": [
+    "F&G revirtiendo a Fear tras mejora reciente",
+    "dominancia BTC persistentemente alta = poca rotación a alts",
+    "mcap global en caída sostenida 24h",
+    "candidatos meme con subidas extremas ya extendidas (riesgo blow-off top)"
+   ],
+   "market_read": "Régimen neutral con sesgo a Fear (F&G cayendo de Neutral a 30-34) y apetito meme bajo (0.2), sin rotación clara hacia altcoins mientras BTC domina; en este contexto conviene evitar perseguir velas ya extendidas y priorizar setups en consolidación/reaceleración con tokenomics limpios.",
+   "picks": [
+    {
+     "key": "solana:x94ouReAXGWHfNnGokusmmfNttSNEXyfY4ZCQq9pump",
+     "conviction": 65,
+     "thesis": "iTech: tras el pump de +557% en h6/h24, el h1 está casi plano (+0.7%) y el m5 reacelera (+13.8%), señal de consolidación sana antes de posible segundo impulso. Buy/sell 1.56 en h1 y 1.37 en 24h muestra demanda sostenida, no solo flush inicial. Vol/liq 24h moderado (10.65x), no sobrecalentado. Socials y website presentes, rugcheck 1.0.",
+     "red_flags": "Solo 3.36h de vida, liquidez relativamente baja (42.5k) para el mcap (272k), mcap/liq 6.4x facilita manipulación si entran ballenas.",
+     "horizon_hours": 12
+    },
+    {
+     "key": "solana:HytpiyuR3sVXGB5UqoqrnThCPH2X1tWVm5neep3Dpump",
+     "conviction": 62,
+     "thesis": "F7931A ('Bitcoin'): con 100h de vida es de los pocos candidatos que no es un spike de una vela, sino una subida gradual y escalonada (m5 -2.2%, h1 +15%, h6 +22%, h24 +46%), con buy/sell estable ~1.5 en ambas ventanas. Esto es momentum real acumulativo, no pump artificial de un solo bloque. Socials+website, rugcheck 1.0, mcap/liq 6.0x razonable.",
+     "red_flags": "Vol/liq 24h de 7.43x es modesto, puede perder tracción si el apetito meme sigue bajo; nombre/ticker genérico puede atraer copias.",
+     "horizon_hours": 24
+    },
+    {
+     "key": "ethereum:0x75a3646cb756188bfc9005d82a46abf21d674509",
+     "conviction": 35,
+     "thesis": "PUTIN: mcap/liq de apenas 1.7x es inusualmente bajo (mcap casi igual a liquidez), lo que da mejor relación riesgo/recompensa de salida que el resto del lote. Sigue subiendo en todas las ventanas (m5 +15.9%, h1 +16.4%) sin señales de reversión todavía.",
+     "red_flags": "Sin socials ni website, solo 593 txns en 24h (muy bajo volumen de participantes reales), fácil de manipular con poco capital. Posición pequeña y especulativa únicamente.",
+     "horizon_hours": 6
+    },
+    {
+     "key": "solana:CPoGSmcjprCvzA2MFYLJMpQkGjmgVzKg4RVwMdrzpump",
+     "conviction": 32,
+     "thesis": "BLUE COIN: volumen/liquidez brutal (49x en 24h) con 51.5k txns demuestra actividad real masiva, no solo bots. rugcheck 1.0 y socials presentes dan algo de cobertura.",
+     "red_flags": "h1 ya en rojo (-7.2%) tras el +718% de h6/h24: la vela verde grande probablemente ya pasó y puede estar entrando en distribución. Solo para scalp de muy corto plazo con stop ajustado.",
+     "horizon_hours": 4
+    }
+   ],
+   "avoid": [
+    {
+     "key": "bsc:0x4973aAA8271F044e586b71129791e25B1E807777",
+     "why": "Token BSC de 1.15h con +259% ya consumado, impulsado por fuentes de boost pagado (ds_boost/ds_new_profile/ds_top_boost) sin rugcheck score — patrón típico de pump artificial antes de dump."
+    },
+    {
+     "key": "ethereum:0x67365dbb030027894adbf99ec5f0f266693118c9",
+     "why": "Sin socials ni website, solo 61 txns en 24h, mcap casi igual a liquidez (ratio 1.0) — perfil muy manipulable con participación real mínima."
+    },
+    {
+     "key": "bsc:0xfC96737a40DBf169782E60539B82d4eE17f25708",
+     "why": "Flag de seguridad 'mint activo': el equipo puede inflar el supply en cualquier momento, riesgo de dilución/rug pese al buen volumen."
+    },
+    {
+     "key": "solana:3kRQDKPGqMWwBdGjiVPpPqVzFsnYG5PDqvrVz1D2pump",
+     "why": "Tras +406% en h6/h24, el h1 ya cayó -20.1% — señal clara de distribución/toma de beneficios tras el pump, mal punto de entrada."
+    },
+    {
+     "key": "solana:FWatMYieKhRuJ1yuTcmVG1njRhZWwqHwjR11pBympump",
+     "why": "Precio acelerando en todas las ventanas (m5 +9.6%, h1 +22.8%, h6 +40.1%, h24 +101%) sin signos de pausa — clásico patrón de perseguir la vela verde justo antes del blow-off top, con mcap/liq alto (12.1x)."
+    },
+    {
+     "key": "solana:CvRJ8MrnB1AwjrgX25uyeLJiXNSugTo2ZHh8UXDTpump",
+     "why": "+708% en 24h ya muy extendido, con m5 girando a rojo (-7.7%) y volumen h1 débil frente al mcap — momentum ya consumido, riesgo de perseguir techo."
+    },
+    {
+     "key": "solana:GYKnd6jGUSQoBUnj6LdGCBtCWYDgr2Zd6QwNPcy5pump",
+     "why": "+2234% en 24h, con h1 casi plano y m5 en rojo — fase tardía de distribución post pump masivo, mcap/liq 11.3x da margen amplio de caída si los tenedores grandes salen."
+    },
+    {
+     "key": "ethereum:0x19d5a29c82afab60fe6047b8437c1858789b3150",
+     "why": "h6 en -33.7% tras un pico previo pese a h24 +205% — ya mostró un crash violento y repunte parcial; mcap/liq 27.8x es muy alto para la poca liquidez real que lo sostiene."
+    },
+    {
+     "key": "ethereum:0x8bb6aa42be6551d9843ce3f4ec5297b6c0d9179c",
+     "why": "h6 en -75.3% (crash severo) con recuperación parcial a 24h, sin socials ni website, solo 1317 txns en 24h frente a 5.48M de mcap — perfil de salida de liquidez para insiders."
+    },
+    {
+     "key": "base:0xb2000000000000000000002d0ba3164cc74f58b7",
+     "why": "Variación de precio casi nula (0-0.9%) y vol/liq bajo (4x) — no ofrece tesis de momentum para un scout de alto riesgo, capital mejor usado en setups con catalizador real."
+    },
+    {
+     "key": "base:0x6985884c4392d348587b19cb9eaaf157f13271cd",
+     "why": "Movimiento de precio mínimo (0.6-10%), buy/sell 24h por debajo de 1 (0.58) indica más ventas que compras netas — no es una jugada de momentum meme, es ruido de un proyecto establecido."
+    }
+   ],
+   "vetoes": [
+    {
+     "key": "solana:x94ouReAXGWHfNnGokusmmfNttSNEXyfY4ZCQq9pump",
+     "why": "Ya subió +557% en h6/h24 antes de entrar; liquidez de solo 42.5k para un mcap de 272k (6.4x) deja muy poco margen de salida si hay flush. En régimen de Fear con meme_appetite 0.2 no conviene perseguir un pump ya extendido con liquidez tan fina."
+    },
+    {
+     "key": "ethereum:0x75a3646cb756188bfc9005d82a46abf21d674509",
+     "why": "Sin socials ni website, solo 593 txns/24h: pool de participantes mínimo y fácil de manipular con poco capital. +689% ya consumido en h6/h24 con solo 74 compradores en h1 es perfil clásico de manipulación concentrada, no demanda orgánica."
+    },
+    {
+     "key": "solana:CPoGSmcjprCvzA2MFYLJMpQkGjmgVzKg4RVwMdrzpump",
+     "why": "h1 ya en rojo (-7.2%) justo después del +718% de h6/h24: el propio scout admite que la vela grande probablemente ya pasó. Entrar aquí es comprar la distribución, no el impulso, y conviction del scout ya es baja (32)."
+    }
+   ],
+   "position_alerts": [
+    {
+     "key": "solana:FdKdpz11GsTofLaNiddrhxrsE4APZYSSfLFqQ9YKpump",
+     "action": "exit",
+     "why": "h1 -46.97% y from_peak -32%: la tesis de 'acumulación' se invalidó con un colapso violento, no una corrección sana. Mismo patrón de blow-off top que el usuario quiere evitar."
+    },
+    {
+     "key": "solana:5wsjHxT5nW5jQuVupXUNnYszF3WoWCfGGk9LMcsCJzY8",
+     "action": "exit",
+     "why": "pnl -29%, from_peak -37.4%, liquidez delgada (39.7k) y sin rebote (h1 -8.84%, h24 aún negativo). No hay catalizador de reversión y la liquidez fina penaliza aún más una salida tardía."
+    },
+    {
+     "key": "solana:2gTbp2gwH46rqExzabSyrdR3294SLwCp2rSqWDS6Sim1",
+     "action": "reduce",
+     "why": "pnl -27.7%, from_peak -25.8% con liquidez muy fina (30.3k); el rebote de h6 (+12.37%) es débil frente al deterioro acumulado. Reducir para limitar exposición a una salida estrecha."
+    },
+    {
+     "key": "ethereum:0x19d5a29c82afab60fe6047b8437c1858789b3150",
+     "action": "reduce",
+     "why": "Aunque sigue en +18% de pnl, cayó -33.37% en h6 desde su pico (+205% h24) y el rebote de h1 (+9.56%) es insuficiente para confirmar que el blow-off top terminó. Asegurar parte de la ganancia antes de que se revierta del todo."
+    },
+    {
+     "key": "base:0x456aC19C8a72Aed16376D57c367640D69ff9e6ea",
+     "action": "reduce",
+     "why": "Deterioro consistente en m5/h1/h6 tras el pump de hace un día; from_peak -9.3% y sin señales de estabilización. Posición ya pequeña, pero conviene recortar más dado el momentum negativo sostenido."
+    }
+   ],
+   "max_new_risk": 0.12,
+   "notes": "Régimen neutral-Fear con mcap global cayendo y poca rotación a alts: priorizo vetar picks que ya consumieron su pump o tienen participación/liquidez insuficiente para sostener el tamaño, y recomiendo salir de posiciones en colapso post-pump violento (SIS, STANK) antes de que el stop duro las capture con más pérdida."
+  },
+  "summaries": {
+   "degen": {
+    "name": "degen",
+    "kind": "llm",
+    "equity": 893.6,
+    "cash": 759.73,
+    "return_pct": -10.64,
+    "realized_pnl": -105.19,
+    "open_positions": 4,
+    "closed_trades": 5,
+    "win_rate": 0.0,
+    "rugs": 0,
+    "max_drawdown_pct": -10.64
+   },
+   "momentum": {
+    "name": "momentum",
+    "kind": "llm",
+    "equity": 1002.73,
+    "cash": 546.45,
+    "return_pct": 0.27,
+    "realized_pnl": 2.36,
+    "open_positions": 6,
+    "closed_trades": 3,
+    "win_rate": 33.3,
+    "rugs": 0,
+    "max_drawdown_pct": -2.37
+   },
+   "baseline": {
+    "name": "baseline",
+    "kind": "rules",
+    "equity": 621.03,
+    "cash": 159.32,
+    "return_pct": -37.9,
+    "realized_pnl": -344.07,
+    "open_positions": 5,
+    "closed_trades": 5,
+    "win_rate": 0.0,
+    "rugs": 0,
+    "max_drawdown_pct": -37.9
+   },
+   "hodl_sol": {
+    "name": "hodl_sol",
+    "kind": "hodl",
+    "equity": 999.31,
+    "cash": 0.0,
+    "return_pct": -0.07,
+    "realized_pnl": 0.0,
+    "open_positions": 1,
+    "closed_trades": 0,
+    "win_rate": null,
+    "rugs": 0,
+    "max_drawdown_pct": -0.53
+   }
+  },
+  "llm_calls": 5,
+  "http_errors": [],
+  "duration_s": 343.3
  }
 ]
