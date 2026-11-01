@@ -4,7 +4,7 @@
    "name": "degen",
    "kind": "llm",
    "description": "Cazador de memecoins agresivo. Busca tokens nuevos con momentum explosivo, acepta mucho riesgo, corta pérdidas rápido y deja correr ganadores.",
-   "cash": 759.7335653690477,
+   "cash": 696.8493129142945,
    "start_cash": 1000.0,
    "created": 1793444926.41551,
    "positions": {
@@ -13,13 +13,13 @@
      "symbol": "FOCO",
      "chain": "solana",
      "kind": "dex",
-     "qty": 30419.12974223277,
-     "cost_usd": 19.190996980578788,
+     "qty": 15209.564871116385,
+     "cost_usd": 9.595498490289394,
      "entry_price": 0.0006308857992717239,
      "peak_price": 0.0007133,
-     "last_price": 0.0006944,
+     "last_price": 0.0005403,
      "entry_liquidity": 73078.05,
-     "last_liquidity": 80144.45,
+     "last_liquidity": 70765.76,
      "opened_at": 1793477727.7986174,
      "tp_done": false,
      "sell_tax": 0.0,
@@ -27,10 +27,10 @@
      "url": "https://dexscreener.com/solana/8l3igrfrvkyrjnu9hzf7sk5nja62s8ga54dkatbf6qh2",
      "missing": 0,
      "change": {
-      "m5": -0.72,
-      "h1": 15.01,
-      "h6": -2.38,
-      "h24": 138.0
+      "m5": -1.14,
+      "h1": 1.76,
+      "h6": -11.07,
+      "h24": 144.0
      }
     },
     "base:0x456aC19C8a72Aed16376D57c367640D69ff9e6ea": {
@@ -41,10 +41,10 @@
      "qty": 118093.95937620409,
      "cost_usd": 18.250277388160086,
      "entry_price": 0.00015454031251523534,
-     "peak_price": 0.0001523,
-     "last_price": 0.0001382,
+     "peak_price": 0.0001719,
+     "last_price": 0.0001719,
      "entry_liquidity": 38866.88,
-     "last_liquidity": 37153.6,
+     "last_liquidity": 41824.24,
      "opened_at": 1793477727.7986174,
      "tp_done": false,
      "sell_tax": 0.0,
@@ -52,10 +52,10 @@
      "url": "https://dexscreener.com/base/0x957a3862984613d312d3ae47976762b8e4d0ee24652c7575ed9dca1427d99436",
      "missing": 0,
      "change": {
-      "m5": -0.2,
-      "h1": -4.28,
-      "h6": -6.59,
-      "h24": 120.0
+      "m5": 0.0,
+      "h1": 11.23,
+      "h6": 28.5,
+      "h24": 90.42
      }
     },
     "solana:FWatMYieKhRuJ1yuTcmVG1njRhZWwqHwjR11pBympump": {
@@ -67,9 +67,9 @@
      "cost_usd": 52.901428890104796,
      "entry_price": 0.0010893454093802695,
      "peak_price": 0.001087,
-     "last_price": 0.001087,
+     "last_price": 0.001041,
      "entry_liquidity": 87550.65,
-     "last_liquidity": 89945.95,
+     "last_liquidity": 88202.48,
      "opened_at": 1793500301.0799742,
      "tp_done": false,
      "sell_tax": 0.0,
@@ -77,10 +77,10 @@
      "url": "https://dexscreener.com/solana/6d3ujezdb2wdbvvryfycvgxsih9fw6ml6hscia5qvhwp",
      "missing": 0,
      "change": {
-      "m5": 5.28,
-      "h1": 18.59,
-      "h6": 36.38,
-      "h24": 97.75
+      "m5": 0.87,
+      "h1": 15.37,
+      "h6": -3.31,
+      "h24": -19.1
      }
     },
     "solana:HytpiyuR3sVXGB5UqoqrnThCPH2X1tWVm5neep3Dpump": {
@@ -92,14 +92,57 @@
      "cost_usd": 44.7303885407148,
      "entry_price": 0.0003777806123539389,
      "peak_price": 0.0003698,
-     "last_price": 0.0003698,
+     "last_price": 0.000317,
      "entry_liquidity": 57032.51,
-     "last_liquidity": 57032.51,
+     "last_liquidity": 52921.82,
      "opened_at": 1793512744.7096055,
      "tp_done": false,
      "sell_tax": 0.0,
      "thesis": "F7931A (Bitcoin) es el único pick del scout con subida gradual y escalonada en 100h (no vela única), buy/sell estable ~1.5, rugcheck 1.0 y liquidez decente. Fits mi filtro de disciplina: momentum real, no pump artificial.",
-     "url": "https://dexscreener.com/solana/4ajaw6ugdpmdke12f1cr9a7uerqjfnepvztswenc5wm6"
+     "url": "https://dexscreener.com/solana/4ajaw6ugdpmdke12f1cr9a7uerqjfnepvztswenc5wm6",
+     "missing": 0,
+     "change": {
+      "m5": 7.72,
+      "h1": 14.24,
+      "h6": -2.46,
+      "h24": 79.26
+     }
+    },
+    "solana:4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz": {
+     "key": "solana:4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+     "symbol": "GTA6",
+     "chain": "solana",
+     "kind": "dex",
+     "qty": 3566.659624864972,
+     "cost_usd": 44.20077212678575,
+     "entry_price": 0.012392764316123695,
+     "peak_price": 0.01214,
+     "last_price": 0.01214,
+     "entry_liquidity": 121772.2,
+     "last_liquidity": 121772.2,
+     "opened_at": 1793545540.7217581,
+     "tp_done": false,
+     "sell_tax": 0.0,
+     "thesis": "GTA6 lleva 73h (no parabólico de minutos), h1 solo -3% en consolidación tras +75.9% h24, buy/sell estable 1.22-1.3 y liquidez decente (122k); encaja con mi filtro de disciplina tras la racha de blow-offs que me quemaron.",
+     "url": "https://dexscreener.com/solana/5afbwvsqpjf4cgejq4tajzyypyuvyktrrn3sahnrpnmv"
+    },
+    "solana:8pjfN5Ayb4rucGpYE3tZWN6v3EysizjPx1v62zx1pump": {
+     "key": "solana:8pjfN5Ayb4rucGpYE3tZWN6v3EysizjPx1v62zx1pump",
+     "symbol": "KIM",
+     "chain": "solana",
+     "kind": "dex",
+     "qty": 87758.2110856305,
+     "cost_usd": 26.49249443422695,
+     "entry_price": 0.0003018805204264792,
+     "peak_price": 0.0002943,
+     "last_price": 0.0002943,
+     "entry_liquidity": 53953.34,
+     "last_liquidity": 53953.34,
+     "opened_at": 1793545540.7217581,
+     "tp_done": false,
+     "sell_tax": 0.0,
+     "thesis": "KIM aún no ha roto su momentum (h1 +56.4% sostenido, buy/sell 1.24, rugcheck 1.0, sin red flags de seguridad) a diferencia de SA/ANSEM que ya están en caída libre h1; entrada pequeña por el riesgo de blow-off dado el vol/liq 24h extremo (116x).",
+     "url": "https://dexscreener.com/solana/abeqlwad4nqi37xvtzcpuo953chclqbucuyc8mhdp4eq"
     }
    },
    "trades": [
@@ -377,6 +420,48 @@
      "impact_pct": 0.15,
      "fees_usd": 0.88,
      "reason": "F7931A (Bitcoin) es el único pick del scout con subida gradual y escalonada en 100h (no vela única), buy/sell estable ~1.5, rugcheck 1.0 y liquidez decente. Fits mi filtro de disciplina: momentum real, no pump artificial."
+    },
+    {
+     "t": 1793545540.7217581,
+     "time": "2026-11-01 15:05",
+     "side": "SELL",
+     "key": "solana:7ttfwuBSnbNTgf32gUAT7v9bjdDWsn6pYpp7nmGmpump",
+     "symbol": "FOCO",
+     "chain": "solana",
+     "usd": 7.81,
+     "price": 0.0005403,
+     "fraction": 0.5,
+     "pnl_usd": -1.79,
+     "pnl_pct": -18.6,
+     "rug": false,
+     "closed": false,
+     "reason": "Riesgo marca FOCO como duplicado y deteriorándose (h6 -11%, -24% desde pico); recorto la mitad restante para blindar lo que queda de ganancia real y liberar exposición concentrada."
+    },
+    {
+     "t": 1793545540.7217581,
+     "time": "2026-11-01 15:05",
+     "side": "BUY",
+     "key": "solana:4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+     "symbol": "GTA6",
+     "chain": "solana",
+     "usd": 44.2,
+     "price": 0.01214,
+     "impact_pct": 0.07,
+     "fees_usd": 0.87,
+     "reason": "GTA6 lleva 73h (no parabólico de minutos), h1 solo -3% en consolidación tras +75.9% h24, buy/sell estable 1.22-1.3 y liquidez decente (122k); encaja con mi filtro de disciplina tras la racha de blow-offs que me quemaron."
+    },
+    {
+     "t": 1793545540.7217581,
+     "time": "2026-11-01 15:05",
+     "side": "BUY",
+     "key": "solana:8pjfN5Ayb4rucGpYE3tZWN6v3EysizjPx1v62zx1pump",
+     "symbol": "KIM",
+     "chain": "solana",
+     "usd": 26.49,
+     "price": 0.0002943,
+     "impact_pct": 0.1,
+     "fees_usd": 0.64,
+     "reason": "KIM aún no ha roto su momentum (h1 +56.4% sostenido, buy/sell 1.24, rugcheck 1.0, sin red flags de seguridad) a diferencia de SA/ANSEM que ya están en caída libre h1; entrada pequeña por el riesgo de blow-off dado el vol/liq 24h extremo (116x)."
     }
    ],
    "equity_curve": [
@@ -415,20 +500,24 @@
     {
      "t": 1793512744.7096055,
      "equity": 893.6
+    },
+    {
+     "t": 1793545540.7217581,
+     "equity": 882.39
     }
    ],
-   "realized_pnl": -105.19334283139374,
+   "realized_pnl": -106.97982721542358,
    "wins": 0,
    "losses": 5,
    "rugs": 0,
    "halted_until": 0,
-   "last_commentary": "Corto SIS del todo y reduzco más ONECOIN siguiendo al oficial de riesgo para cortar pérdidas antes de que el stop duro las capture; mantengo FOCO intacto porque ya no está en la lista de alertas y sigue en verde. Refuerzo Leverhedge (único ganador con acumulación real) y abro una entrada pequeña en F7931A por su momentum gradual no parabólico, conservando aún más del 75% en cash dado mi 0% win rate reciente y el apetito meme bajo (0.2)."
+   "last_commentary": "Reduzco FOCO por la alerta de duplicación/deterioro y mantengo Bitcoin y Leverhedge según el oficial de riesgo, dejando correr ONECOIN que ya está en verde. Abro dos posiciones pequeñas (GTA6 disciplinado, KIM momentum temprano aún no agotado) manteniendo más del 80% en cash dado mi 0% win rate reciente y el apetito meme bajo del régimen."
   },
   "momentum": {
    "name": "momentum",
    "kind": "llm",
    "description": "Trader de momentum más selectivo. Prefiere tokens con algo de historia, liquidez seria y tendencia confirmada; mezcla memecoins consolidadas con majors según el régimen de mercado.",
-   "cash": 546.45390247974,
+   "cash": 568.9249829480544,
    "start_cash": 1000.0,
    "created": 1793444926.41551,
    "positions": {
@@ -440,8 +529,8 @@
      "qty": 0.21694237281658815,
      "cost_usd": 152.7768345129058,
      "entry_price": 704.227728909693,
-     "peak_price": 705.91,
-     "last_price": 704.61,
+     "peak_price": 716.27,
+     "last_price": 716.27,
      "entry_liquidity": 1000000000000.0,
      "last_liquidity": 1000000000000.0,
      "opened_at": 1793444926.41551,
@@ -451,9 +540,9 @@
      "url": null,
      "missing": 0,
      "change": {
-      "h1": 0.2065,
-      "h24": 0.21043,
-      "d7": -5.3972
+      "h1": 0.1009,
+      "h24": 1.48792,
+      "d7": -2.8448
      }
     },
     "major:ethereum": {
@@ -464,8 +553,8 @@
      "qty": 0.03633697336840339,
      "cost_usd": 81.83821144168088,
      "entry_price": 2252.202202202202,
-     "peak_price": 2266.77,
-     "last_price": 2266.77,
+     "peak_price": 2269.49,
+     "last_price": 2269.49,
      "entry_liquidity": 1000000000000.0,
      "last_liquidity": 1000000000000.0,
      "opened_at": 1793466896.2656596,
@@ -475,9 +564,9 @@
      "url": null,
      "missing": 0,
      "change": {
-      "h1": -0.0634,
-      "h24": 1.19058,
-      "d7": -4.0048
+      "h1": 0.1738,
+      "h24": 1.14786,
+      "d7": -2.6658
      }
     },
     "solana:DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump": {
@@ -489,9 +578,9 @@
      "cost_usd": 30.312825776753165,
      "entry_price": 0.0013790530290252688,
      "peak_price": 0.001493,
-     "last_price": 0.001438,
+     "last_price": 0.00136,
      "entry_liquidity": 121920.48,
-     "last_liquidity": 126107.48,
+     "last_liquidity": 122613.77,
      "opened_at": 1793477727.7986174,
      "tp_done": false,
      "sell_tax": 0.0,
@@ -499,10 +588,10 @@
      "url": "https://dexscreener.com/solana/b4cp45pgifvm5faxfh6aev8qz3eunqnqgbw7kuc7mhnb",
      "missing": 0,
      "change": {
-      "m5": 0.05,
-      "h1": -2.86,
-      "h6": -0.03,
-      "h24": 19.01
+      "m5": -0.3,
+      "h1": 1.43,
+      "h6": 3.49,
+      "h24": -3.17
      }
     },
     "major:bitcoin": {
@@ -513,8 +602,8 @@
      "qty": 0.001040861509845353,
      "cost_usd": 80.77668782311363,
      "entry_price": 77605.60560560561,
-     "peak_price": 77797.0,
-     "last_price": 77797.0,
+     "peak_price": 77967.0,
+     "last_price": 77967.0,
      "entry_liquidity": 1000000000000.0,
      "last_liquidity": 1000000000000.0,
      "opened_at": 1793477727.7986174,
@@ -524,34 +613,9 @@
      "url": null,
      "missing": 0,
      "change": {
-      "h1": 0.0397,
-      "h24": 0.80747,
-      "d7": -3.7475
-     }
-    },
-    "solana:7ttfwuBSnbNTgf32gUAT7v9bjdDWsn6pYpp7nmGmpump": {
-     "key": "solana:7ttfwuBSnbNTgf32gUAT7v9bjdDWsn6pYpp7nmGmpump",
-     "symbol": "FOCO",
-     "chain": "solana",
-     "kind": "dex",
-     "qty": 42728.218608085896,
-     "cost_usd": 30.256460582467206,
-     "entry_price": 0.0007081142525502214,
-     "peak_price": 0.0006944,
-     "last_price": 0.0006944,
-     "entry_liquidity": 79069.86,
-     "last_liquidity": 80144.45,
-     "opened_at": 1793488981.9895144,
-     "tp_done": false,
-     "sell_tax": 0.0,
-     "thesis": "FOCO tiene 195h de historia (no es un lanzamiento parabólico nuevo), liquidez decente (79k), heuristic_score 92.2 y tendencia confirmada y consistente en varios timeframes (h1 +35%, h6 +187%, h24 +120%) con buy/sell ratio sano (1.19) sin red flags de seguridad. Es el perfil de memecoin consolidada q",
-     "url": "https://dexscreener.com/solana/8l3igrfrvkyrjnu9hzf7sk5nja62s8ga54dkatbf6qh2",
-     "missing": 0,
-     "change": {
-      "m5": -0.72,
-      "h1": 15.01,
-      "h6": -2.38,
-      "h24": 138.0
+      "h1": 0.1334,
+      "h24": 0.85287,
+      "d7": -2.8993
      }
     },
     "base:0xb2000000000000000000002d0ba3164cc74f58b7": {
@@ -563,9 +627,9 @@
      "cost_usd": 79.942326064309,
      "entry_price": 287.9750389028001,
      "peak_price": 284.012,
-     "last_price": 284.012,
+     "last_price": 283.045,
      "entry_liquidity": 1800213.61,
-     "last_liquidity": 1953474.29,
+     "last_liquidity": 1681759.15,
      "opened_at": 1793500301.0799742,
      "tp_done": false,
      "sell_tax": 0.0,
@@ -573,10 +637,10 @@
      "url": "https://dexscreener.com/base/0x16c70f04c3080a127486cdf5a4c33c066bbf47c3",
      "missing": 0,
      "change": {
-      "m5": 0.0,
-      "h1": 0.12,
-      "h6": 0.41,
-      "h24": 0.92
+      "m5": 0.01,
+      "h1": 0.01,
+      "h6": 0.01,
+      "h24": 0.55
      }
     }
    },
@@ -835,6 +899,22 @@
      "impact_pct": 0.01,
      "fees_usd": 1.34,
      "reason": "GOOGLc ofrece liquidez muy profunda ($1.8M), volatilidad mínima y buy/sell sano (1.58-2.8x) en un pool dominado por blow-off tops ya extendidos (PAWCAT +7494% h24, GTA6 en pullback -16.7% h1); encaja con mi estilo selectivo de mezclar un activo serio y de baja volatilidad frente a perseguir techos d"
+    },
+    {
+     "t": 1793545540.7217581,
+     "time": "2026-11-01 15:05",
+     "side": "SELL",
+     "key": "solana:7ttfwuBSnbNTgf32gUAT7v9bjdDWsn6pYpp7nmGmpump",
+     "symbol": "FOCO",
+     "chain": "solana",
+     "usd": 22.47,
+     "price": 0.0005403,
+     "fraction": 1.0,
+     "pnl_usd": -7.79,
+     "pnl_pct": -25.7,
+     "rug": false,
+     "closed": true,
+     "reason": "FOCO rompe el trailing stop (-22.2% desde pico, umbral -22%) y el oficial de riesgo repite la alerta de duplicidad con la cartera degen, ambas deteriorándose en h6 (-11%). Ya recorté a la mitad ayer sin resultado; cierro el resto para no defender una posición que sigue perdiendo tracción pese al pum"
     }
    ],
    "equity_curve": [
@@ -873,20 +953,24 @@
     {
      "t": 1793512744.7096055,
      "equity": 1002.73
+    },
+    {
+     "t": 1793545540.7217581,
+     "equity": 996.38
     }
    ],
-   "realized_pnl": 2.3572486809697857,
+   "realized_pnl": -5.428131433183022,
    "wins": 1,
-   "losses": 2,
+   "losses": 3,
    "rugs": 0,
    "halted_until": 0,
-   "last_commentary": "Mantengo las 6 posiciones sin cambios: BNB/ETH/BTC siguen como ancla defensiva con pnl estable, CBUCKS conserva su tendencia consolidada (+4.2%), FOCO se recupera en h1 (+15%) tras el recorte previo así que no tiene sentido vender más en pérdida, y GOOGLc aporta liquidez seria de baja volatilidad. Con 6 posiciones ya al máximo permitido, meme_appetite en 0.2 y el F&G revirtiendo a Fear, prefiero no forzar nuevas compras ni perseguir los blow-off tops del pool (AAPLCAT, GTA6, SP) y conservar el 54% en cash como colchón hasta que el régimen aclare rotación hacia alts."
+   "last_commentary": "Cierro FOCO por completo: rompe mi propio trailing stop y está duplicado con otra cartera del equipo, así que prefiero liberar ese riesgo en vez de insistir en una memecoin que ya mostró distribución. Mantengo BNB/ETH/BTC como ancla defensiva (régimen neutral-cauteloso, dominancia BTC alta) y conservo CBUCKS/GOOGLc por su perfil de baja volatilidad y liquidez seria. No persigo a Dacity ni SI: apetito meme bajo (0.25) y señales mixtas no justifican abrir riesgo nuevo todavía, así que subo cash por encima del 55% hasta que se confirme rotación hacia alts."
   },
   "baseline": {
    "name": "baseline",
    "kind": "rules",
    "description": "Control SIN IA: compra los candidatos con mejor puntuación heurística y aplica las mismas reglas de riesgo que degen. Sirve para ver si Claude aporta algo.",
-   "cash": 159.3184449406887,
+   "cash": 216.00647426560138,
    "start_cash": 1000.0,
    "created": 1793444926.41551,
    "positions": {
@@ -898,10 +982,10 @@
      "qty": 16789.39504628556,
      "cost_usd": 100.0,
      "entry_price": 0.005956140749819555,
-     "peak_price": 0.008215,
-     "last_price": 0.007034,
+     "peak_price": 0.01014,
+     "last_price": 0.01014,
      "entry_liquidity": 227104.39,
-     "last_liquidity": 250372.9,
+     "last_liquidity": 301376.0,
      "opened_at": 1793444926.41551,
      "tp_done": false,
      "sell_tax": 0.0,
@@ -909,10 +993,10 @@
      "url": "https://dexscreener.com/ethereum/0xc4fc30660423bd04ae1038c2910437d4c2e337498f19cea23df90f4c3e5cf88f",
      "missing": 0,
      "change": {
-      "m5": -6.4,
-      "h1": 9.56,
-      "h6": -33.37,
-      "h24": 205.0
+      "m5": 2.54,
+      "h1": 13.61,
+      "h6": 58.88,
+      "h24": 108.0
      }
     },
     "solana:2gTbp2gwH46rqExzabSyrdR3294SLwCp2rSqWDS6Sim1": {
@@ -924,9 +1008,9 @@
      "cost_usd": 99.82336421991079,
      "entry_price": 0.0001925217872693608,
      "peak_price": 0.0001884,
-     "last_price": 0.0001398,
+     "last_price": 0.0001506,
      "entry_liquidity": 35319.73,
-     "last_liquidity": 30260.3,
+     "last_liquidity": 31440.16,
      "opened_at": 1793444926.41551,
      "tp_done": false,
      "sell_tax": 0.0,
@@ -934,10 +1018,10 @@
      "url": "https://dexscreener.com/solana/gu2ajbkebpvxumm27t41xetevusbvrwghdmjw7fdc4bn",
      "missing": 0,
      "change": {
-      "m5": 0.0,
-      "h1": 2.16,
-      "h6": 12.37,
-      "h24": 8.68
+      "m5": -1.49,
+      "h1": 2.68,
+      "h6": 1.92,
+      "h24": 19.86
      }
     },
     "base:0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22": {
@@ -948,10 +1032,10 @@
      "qty": 0.038206617219140294,
      "cost_usd": 99.24530339642041,
      "entry_price": 2597.594621559474,
-     "peak_price": 2586.46,
-     "last_price": 2586.46,
+     "peak_price": 2590.018,
+     "last_price": 2590.018,
      "entry_liquidity": 1580077.21,
-     "last_liquidity": 1791143.29,
+     "last_liquidity": 289035.98,
      "opened_at": 1793444926.41551,
      "tp_done": false,
      "sell_tax": 0.0,
@@ -959,10 +1043,10 @@
      "url": "https://dexscreener.com/base/0x03bf20662f76312aec31ef28d4a024e1eca108af",
      "missing": 0,
      "change": {
-      "m5": 0.01,
-      "h1": 0.02,
-      "h6": 0.63,
-      "h24": 1.33
+      "m5": 0.03,
+      "h1": 0.21,
+      "h6": -0.18,
+      "h24": 1.25
      }
     },
     "ethereum:0x6d34013052c8fe696805dde682ae8086be5655cc": {
@@ -974,9 +1058,9 @@
      "cost_usd": 98.85595441555391,
      "entry_price": 0.018260815212128467,
      "peak_price": 0.02496,
-     "last_price": 0.01899,
+     "last_price": 0.0185,
      "entry_liquidity": 400306.0,
-     "last_liquidity": 414083.5,
+     "last_liquidity": 409102.78,
      "opened_at": 1793444926.41551,
      "tp_done": false,
      "sell_tax": 0.0,
@@ -984,35 +1068,10 @@
      "url": "https://dexscreener.com/ethereum/0x66e4c63873c716c16433ede4b22911631923de96",
      "missing": 0,
      "change": {
-      "m5": -0.13,
-      "h1": -4.55,
-      "h6": -5.44,
-      "h24": 39.76
-     }
-    },
-    "solana:5wsjHxT5nW5jQuVupXUNnYszF3WoWCfGGk9LMcsCJzY8": {
-     "key": "solana:5wsjHxT5nW5jQuVupXUNnYszF3WoWCfGGk9LMcsCJzY8",
-     "symbol": "STANK",
-     "chain": "solana",
-     "kind": "dex",
-     "qty": 318965.090240177,
-     "cost_usd": 98.6883857169866,
-     "entry_price": 0.0003094018396893384,
-     "peak_price": 0.0003517,
-     "last_price": 0.0002203,
-     "entry_liquidity": 47060.7,
-     "last_liquidity": 39689.71,
-     "opened_at": 1793444926.41551,
-     "tp_done": false,
-     "sell_tax": 0.0,
-     "thesis": "heurística 74.2",
-     "url": "https://dexscreener.com/solana/6hyfmye2byyscterqueckhihq5x9j2wd2z9watdwy38n",
-     "missing": 0,
-     "change": {
-      "m5": 0.31,
-      "h1": -8.84,
-      "h6": -6.74,
-      "h24": -2.65
+      "m5": -3.3,
+      "h1": 2.45,
+      "h6": -0.7,
+      "h24": -15.14
      }
     }
    },
@@ -1232,6 +1291,23 @@
      "closed": true,
      "reason": "STOP-LOSS -44%",
      "portfolio": "baseline"
+    },
+    {
+     "t": 1793545540.7217581,
+     "time": "2026-11-01 15:05",
+     "side": "SELL",
+     "key": "solana:5wsjHxT5nW5jQuVupXUNnYszF3WoWCfGGk9LMcsCJzY8",
+     "symbol": "STANK",
+     "chain": "solana",
+     "usd": 56.69,
+     "price": 0.0001816,
+     "fraction": 1.0,
+     "pnl_usd": -42.0,
+     "pnl_pct": -42.6,
+     "rug": false,
+     "closed": true,
+     "reason": "STOP-LOSS -41%",
+     "portfolio": "baseline"
     }
    ],
    "equity_curve": [
@@ -1270,11 +1346,15 @@
     {
      "t": 1793512744.7096055,
      "equity": 621.03
+    },
+    {
+     "t": 1793545540.7217581,
+     "equity": 662.75
     }
    ],
-   "realized_pnl": -344.0685473104397,
+   "realized_pnl": -386.06890370251364,
    "wins": 0,
-   "losses": 5,
+   "losses": 6,
    "rugs": 0,
    "halted_until": 1793553296.2656596
   },
@@ -1295,7 +1375,7 @@
      "cost_usd": 1000.0,
      "entry_price": 95.64564564564564,
      "peak_price": 95.94,
-     "last_price": 95.58,
+     "last_price": 94.93,
      "entry_liquidity": 1000000000000.0,
      "last_liquidity": 1000000000000.0,
      "opened_at": 1793444926.41551,
@@ -1305,9 +1385,9 @@
      "url": null,
      "missing": 0,
      "change": {
-      "h1": -0.1257,
-      "h24": -0.28975,
-      "d7": -6.7211
+      "h1": 0.0834,
+      "h24": -0.70243,
+      "d7": -5.7163
      }
     }
    },
@@ -1362,6 +1442,10 @@
     {
      "t": 1793512744.7096055,
      "equity": 999.31
+    },
+    {
+     "t": 1793545540.7217581,
+     "equity": 992.52
     }
    ],
    "realized_pnl": 0.0,
@@ -1374,10 +1458,10 @@
  "meta": {
   "regime": {
    "regime": "neutral",
-   "confidence": 50,
-   "summary": "Majors siguen en rojo a 7d (-3.7% a -6.7%) con h24 mixto y apenas estabilizándose; el F&G recayó de Neutral (48-51) a Fear (30-34) en las últimas lecturas, revirtiendo la mejora previa. Mcap global cae -1.87% en 24h y la dominancia BTC se mantiene alta (59.3%), sin rotación clara hacia altcoins; el trending mezcla majors y memecoins especulativas (PEPE, PENGU) pero sin señal de apetito generalizado."
+   "confidence": 55,
+   "summary": "Majors recuperan algo de terreno en h24 (BTC +0.85%, ETH +1.15%, BNB +1.49%) pero siguen en rojo a 7d (-2.7% a -5.7%), y el F&G rebotó de Fear (30-34) a Neutral (48-51) mostrando mejora de sentimiento tras el pánico reciente. Sin embargo el mcap global cae -3.04% en 24h y la dominancia BTC sigue alta (59.9%), señal de que no hay rotación fuerte hacia altcoins ni memecoins todavía. El trending mezcla majors (BTC, ETH, ZEC, AAVE) con algo de especulación en infra/DeFi (HYPE, LIT, UNI) y solo una memecoin pura de bajo rango (SI), sin apetito generalizado por memes."
   },
-  "last_run": 1793512744.7096055,
-  "cycles": 8
+  "last_run": 1793545540.7217581,
+  "cycles": 9
  }
 }
